@@ -2,6 +2,11 @@
     pointer-events: auto;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
 
 
 
@@ -25,4 +30,34 @@
     height: 100vh;
     position: relative;
     object-fit: fit;
+}
+
+
+
+
+
+/* utilities */
+.justify-content{
+    justify-content: center;
+}
+
+.text-capitalized{
+    text-transform: capitalize;
+}
+
+
+.btn{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 750;
+    font-size: 15px;
+    flex-grow: 1;
+    line-height: 20px;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 50px;
+    background-color: rgb(29, 155, 240);
+    outline: rgb(3, 108, 219) solid 1px !important;
+    width : 20vw;
+    padding: 2%;
 }
