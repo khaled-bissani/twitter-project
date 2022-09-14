@@ -23,12 +23,14 @@ body{
     right:0;
     height:100%;
     width:100%;
+    z-index: 0;
 }
 
 .right-div img{
     max-width: 55vw;
     height: 100vh;
     object-fit: fit;
+    z-index: 0;
 }
 
 .left-div{
@@ -42,7 +44,8 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 1%;
-    padding: 0;;
+    padding: 0;
+    z-index: 0;
 }
 
 .landing-content h1{
@@ -92,6 +95,7 @@ body{
     background-color: white;
     position: relative;
 }
+
 .a-link{
     text-decoration: none;
     color: rgb(48, 159, 241);
@@ -228,7 +232,7 @@ form > input {
 
 
 /* media queries */
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .container {flex-wrap: wrap;flex-direction: column;}
     .btns{font-size: small;}
     #dog-img{width:20vw;}
