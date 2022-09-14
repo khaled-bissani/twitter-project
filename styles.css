@@ -80,7 +80,7 @@ body{
 }
 .line:after {
     content: "";
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #aeaeae;
     position: absolute;
     top: 50%;
     left: 0;
@@ -93,8 +93,15 @@ body{
     background-color: white;
     position: relative;
 }
-.condition{
-    
+.a-link{
+    text-decoration: none;
+    color: rgb(48, 159, 241);
+}
+
+#condition{
+    font-size: 13px;
+    width: 350px;
+    color: #7e7e7e;
 }
 
 /* utilities */
