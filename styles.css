@@ -42,13 +42,18 @@ body{
 .landing-content {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
-    padding: 1%;
+    margin-top: 1%;
+    padding: 0;;
 }
 
 .landing-content h1{
-    font-size: 84px;
+    font-size: 64px;
     font-weight: 900;
+}
+
+.landing-content h2{
+    line-height: 20px;
+    font-size: 36px;
 }
 
 
