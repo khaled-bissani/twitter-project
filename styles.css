@@ -33,11 +33,23 @@ body{
 }
 
 .left-div{
+    display: flex;
+    flex-direction: column;
     margin-left: 3%;
     margin-top: 3%;
 }
  
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 1%;
+}
 
+.landing-content h1{
+    font-size: 84px;
+    font-weight: 900;
+}
 
 
 
