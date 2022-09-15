@@ -1,11 +1,18 @@
-* {
-    pointer-events: auto;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -22,41 +29,45 @@ body{
     left:0;
     bottom:0;
     right:0;
-    height:100%;
-    width:100%;
+    width: 100%;
+    height: 100vh;
     z-index: 0;
 }
-
+.right-div{
+    width: 50%;
+    height: inherit;
+}
 .right-div img{
-    max-width: 55vw;
-    height: 100vh;
-    object-fit: fit;
-    z-index: 0;
+    width: 100%;
+    height: inherit;
+    object-fit: fcover;
 }
 
 .left-div{
     display: flex;
+    width: 50%;
     flex-direction: column;
-    margin-left: 3%;
-    margin-top: 3%;
+    margin-left: 40px;
+    margin-top: 40px;
 }
  
 .landing-content {
     display: flex;
     flex-direction: column;
-    margin-top: 1%;
     padding: 0;
     z-index: 0;
 }
 
 .landing-content h1{
-    font-size: 64px;
-    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    font-size: 4em;
+    font-weight: 800;
     text-transform: capitalize;
 }
 
 .landing-content h2{
-    font-size: 32px;
+    font-size: 2.2em;
     font-weight: 900;
 }
 
@@ -68,7 +79,7 @@ body{
 .app-download{
     border-radius: 25px;
     padding-right: 10px;
-    width: 10vw;
+    width: 100%;
 }
 
 .bottom-content h3{
@@ -78,9 +89,9 @@ body{
 .line {
     position: relative;
     text-align: center;
-    width: 200px;
+    width: 35%;
     margin-bottom: 1%;
-    margin-left: 55px;
+    margin-left: 25px;
 }
 .line:after {
     content: "";
@@ -99,13 +110,12 @@ body{
 }
 
 .a-link{
-    text-decoration: none;
     color: rgb(48, 159, 241);
 }
 
 #condition{
-    font-size: 13px;
-    width: 350px;
+    font-size: 14px;
+    width: 50%;
     color: #7e7e7e;
 }
 
@@ -197,7 +207,7 @@ form {
     flex-direction: column;
 }
 form > input {
-    width: 200px;
+    width: 70%;
 }
 form > input {
     font-size: 16px;
@@ -258,8 +268,8 @@ h5::first-letter{
     border-radius: 50px;
     background-color: rgb(29, 155, 240);
     outline: rgb(3, 108, 219) solid 1px !important;
-    width : 20vw;
-    padding: 2%;
+    width : 48%;
+    padding: 15px;
 }
 
 .btn-white{
@@ -277,18 +287,24 @@ h5::first-letter{
 }
 
 .popup-btn{
-    width: 15vw;
-    height: 40px;
+    width: 50%;
 }
 
 
 #logo-div{
-    width: 45px;
-    margin-bottom: 2%;
+    width: 10%;
+    margin-bottom: 0;
+}
+.popup-logo-div{
+    display:flex;
+    height: 15%;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .logo-img{
-    width: 45px;
+    width: 20%;
     margin-bottom: 2%;
     margin-top: 0;
 }
@@ -296,24 +312,71 @@ h5::first-letter{
 
 
 /* media queries */
+
 /*@media screen and (max-width: 600px) {
-    .container {flex-wrap: wrap;flex-direction: column;}
+    .main-container {flex-wrap: wrap;flex-direction: column-reverse;}
     .btns{font-size: small;}
-    #dog-img{width:20vw;}
-    .text-style{font-size: smaller;}
-    #output-div{margin-left: 20vw;}
-    #output{font-size: smaller;}
     .popups{flex-direction: column;}
     .box{width: 50%;}
     .popup{width: 50%;}
   
-  }
+  }*/
   
-  @media screen and (max-width: 700px){
-      .box{
-        width: 70%;
-      }
-      .popup{
-        width: 70%;
-      }
+/*@media screen and (max-width: 1000px){
+    .main-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
+    h1{
+        font-size: small;
+    }
+    .box{
+        width: 30%;
+    }
+    .popup{
+        width: 30%;
+    }
+    .btn{
+        width: 35vw;
+    }
+    form > input {
+        width: 30vw;
+    }
+}*/
+@media screen and (max-width: 900px) {
+    .main-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-div{
+        order: 1;
+        margin-bottom: 10px;
+    }
+    .right-div{
+        order: 2;
+    }
+    .left-div,
+    .right-div {
+        width: 100%;
+        height: 50;
+    }
+  
+    .right-div img{
+        width: 100vw;
+    }
+    .box{
+        width: 70%;
+    }
+    .popup{
+        width: 70%;
+    }
+    form {
+        display: block;
+        width: fit-content;
+    }
+    .btn{
+        width: 40vw;
+    }
+}
