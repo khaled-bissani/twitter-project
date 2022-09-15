@@ -312,37 +312,6 @@ h5::first-letter{
 
 
 /* media queries */
-
-/*@media screen and (max-width: 600px) {
-    .main-container {flex-wrap: wrap;flex-direction: column-reverse;}
-    .btns{font-size: small;}
-    .popups{flex-direction: column;}
-    .box{width: 50%;}
-    .popup{width: 50%;}
-  
-  }*/
-  
-/*@media screen and (max-width: 1000px){
-    .main-container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-    }
-    h1{
-        font-size: small;
-    }
-    .box{
-        width: 30%;
-    }
-    .popup{
-        width: 30%;
-    }
-    .btn{
-        width: 35vw;
-    }
-    form > input {
-        width: 30vw;
-    }
-}*/
 @media screen and (max-width: 900px) {
     .main-container{
         width: 100%;
