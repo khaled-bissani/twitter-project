@@ -422,4 +422,13 @@ a:hover{
         margin-right: 10px;
         font-size: 17px;
     }
+    .feed-header-image{
+        width: 20%;
+    }
+    .feed-content{
+        margin-left: 15px;
+    }
+    .feed-like{
+        margin:0;
+    }
 }
