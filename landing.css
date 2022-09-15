@@ -51,6 +51,7 @@ body{
 .landing-content h1{
     font-size: 64px;
     font-weight: 900;
+    text-transform: capitalize;
 }
 
 .landing-content h2{
@@ -148,17 +149,18 @@ body{
     display: flex;
     flex-direction: column;
     margin: 70px auto;
-    padding: 20px;
+    padding: 40px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     position: relative;
     transition: all 5s ease-in-out;
 }
 .popup h2 {
-    margin-top: 0;
+    margin-top: 10px;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
+    font-size: 36px;
 }
 .popup .close {
     position: absolute;
@@ -171,7 +173,7 @@ body{
     color: #333;
 }
 .popup .close:hover {
-    color: #06D85F;
+    color: rgb(48, 159, 241);
 }
 .popup .content {
     display: flex;
@@ -192,14 +194,27 @@ form > input {
 
 
 /* utilities */
-.justify-content{
-    justify-content: center;
+
+button:active{
+    transform: scale(0.80);
 }
 
-.text-capitalized{
+button:focus{
+    outline: none;
+}
+button::first-letter{
     text-transform: capitalize;
 }
 
+h2::first-letter{
+    text-transform: capitalize;
+}
+h3::first-letter{
+    text-transform: capitalize;
+}
+h5::first-letter{
+    text-transform: capitalize;
+}
 
 .btn{
     color: rgb(255, 255, 255);
@@ -220,6 +235,12 @@ form > input {
 .btn-white{
     background-color: white;
     color:rgb(29, 155, 240);
+    outline: rgb(205, 206, 207) solid 1px !important;
+}
+
+.black-btn{
+    background-color: black;
+    color:rgb(255, 255, 255);
     outline: rgb(205, 206, 207) solid 1px !important;
 }
 

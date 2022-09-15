@@ -22,15 +22,15 @@
             <!-- Start log in pop up -->
             <div id="popup1" class="overlay">
                 <div class="popup">
-                    <h2 class="text-style">Welcome back!</h2>
+                    <h2 >Welcome back!</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         <p>Thanks to pop me out of that button, but now i'm done so you can close this window.</p>
                         <form>
-                            <label for="username" class="text-style">Username:</label>
+                            <label for="username">Username:</label>
                             <input class="text-box" type="text" id="username" value="" />
-                            <label for="password" class="text-style">Password:</label>
-                            <input class="text-box" type="text" id="password" value="" />
+                            <label for="password">Password:</label>
+                            <input class="text-box" id="password" value="" />
                             <button class="btns" id="login-btn">Log in</button>
                         </form>
                     </div>
@@ -41,16 +41,21 @@
             <!-- Start sign up pop up -->
             <div id="popup2" class="overlay">
                 <div class="popup">
-                    <h2 class="text-style">Welcome!</h2>
+                    <h2 class="text-style">Create your account</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
-                        Thank to pop me out of that button, but now i'm done so you can close this window.
                         <form>
-                            <label for="username" class="text-style" >Choose username:</label>
-                            <input class="text-box" type="text" id="new-username" value="" />
-                            <label for="password" class="text-style">New Password:</label>
-                            <input class="text-box" type="text" id="new-password" value="" />
-                            <button class="btns" id="signup-btn">SIGN UP</button>
+                            <label for="name">Name:</label>
+                            <input class="text-box" id="name" value="" />
+                            <label for="email">Email</label>
+                            <input class="text-box" id="email" value="" />
+                            <label for="username">username</label>
+                            <input class="text-box" id="username" value="" />
+                            <label for="phone">phone</label>
+                            <input class="text-box" id="phone" value="" />
+                            <label for="password">password</label>
+                            <input class="text-box" id="password" value="" />
+                            <button class="btn black-btn" id="signup-btn">SIGN UP</button>
                         </form>
                     </div>
                 </div>
@@ -68,8 +73,8 @@
                 <img id="logo-div" src="./images/logosvg.png" alt="twitter-logo">
             </div>
             <div class="landing-content">
-                <h1 class="text-capitalized">happening now</h1>
-                <h2 class="text-capitalized">join twitter today</h2>
+                <h1>happening now</h1>
+                <h2>join twitter today</h2>
                 <div class="app-download-links">
                     <a href="https://apps.apple.com/us/app/twitter/id333903271">
                         <img class="app-download" src="./images/applelogodark.jpg" alt="apple store download app">
@@ -81,13 +86,13 @@
                 <div class="line">
                     <span>or</span>
                 </div>
-                <a  href="#popup2"><button class="btn text-capitalized" type="button">Sign up with phone or email</button></a>
+                <a  href="#popup2"><button class="btn" type="button">Sign up with phone or email</button></a>
                 <div id="condition">
                     <h5>By signing up, you agree to the<a class="a-link" href="https://twitter.com/en/tos"> Terms of Service</a> and <a class="a-link" href="https://twitter.com/en/privacy"> Privacy Policy</a>, including <a class="a-link" href="https://help.twitter.com/en/rules-and-policies/twitter-cookies" >Cookie Use</a>.</h5>
                 </div>
                 <div class="bottom-content">
-                    <h3 class="text-capitalized">Aready have an account?</h3>
-                    <a  href="#popup1"><button class="btn btn-white text-capitalized" type="button">Sign in</button></a>
+                    <h3>Aready have an account?</h3>
+                    <a  href="#popup1"><button class="btn btn-white" type="button">Sign in</button></a>
                 </div>
             </div>
         </div>
