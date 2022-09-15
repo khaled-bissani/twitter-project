@@ -117,6 +117,39 @@ a:hover{
     justify-content: center;
     align-content: center;
 }
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    height: 50px;
+    background: #EFF3F4;
+    border-radius: 100px;
+    padding-left: 3%;
+    margin-top: 5px;
+}
+.search > div {
+    display: flex;
+    justify-content: start;
+} 
+.search i{
+    padding-bottom: 1px;
+    color: #6A767E;
+}
+.search input{
+    outline: none;
+    border: none;
+    background-color: #EFF3F4;
+    padding-left: 5%;
+    padding-right: 1%;
+    width: 90%;
+}
+/* Utilities */
+.container{
+    padding-left:20%;
+    padding-right:20%;
+}
 /*media query*/
 @media (max-width: 952px){
     label.logo{
