@@ -74,6 +74,8 @@ a:hover{
 /* Header */
 .header-section{
     margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 .header-profile{
     display: flex;
@@ -115,7 +117,32 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width:5%
+}
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    background: #EFF3F4;
+    border-radius: 100px;
+    padding-left: 3%;
+}
+.search > div {
+    display: flex;
+    justify-content: start;
+} 
+.search i{
+    padding-bottom: 1px;
+    color: #6A767E;
+}
+.search input{
+    outline: none;
+    border: none;
+    background-color: #EFF3F4;
+    padding-left: 5%;
+    padding-right: 1%;
+    width: 100%;
 }
 /* Utilities */
 .container{
