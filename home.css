@@ -80,9 +80,9 @@ a:hover{
 }
 .header-profile{
     display: flex;
+    justify-content: space-evenly;
     cursor: pointer;
     width: 35%;
-    height: 100%;
 }
 .header-profile:hover{
     transition: 0.3;
@@ -91,9 +91,6 @@ a:hover{
 }
 .header-image{
     width: 20%;
-    height: 80px;
-    margin-left: 20px;
-    margin-top: 5px;
     border-radius: 50%;
 }
 .header-image > img {
@@ -106,13 +103,12 @@ a:hover{
     justify-content: center;
     align-content: center;
     width: 35%;
-    margin-left: 15px;
 }
 .header-name > p:first-child{
-    font-size: 16px;
+    font-size: 20px;
 }
 .header-name > p:last-child{
-    font-size: 10px;
+    font-size: 16px;
     color: #5b6265;
 }
 .header-option{
@@ -131,7 +127,7 @@ a:hover{
     background: #EFF3F4;
     border-radius: 100px;
     padding-left: 3%;
-    margin-top: 17px;
+    margin-top: 5px;
 }
 .search > div {
     display: flex;
@@ -151,26 +147,25 @@ a:hover{
 }
 /* Tweet */
 .tweet-section{
-    width: 100%;
     border: 1px solid #A6A6A6;
     display: flex;
+    justify-content: start;
+    margin-left: 30px;
 }
 .section-1{
     width: 10%;
-}
-.section-1 > h1{
-    font-size: 24px;
+    padding-left: 20px;
 }
 .section-1 > div {
-    width: 50%;
-    margin-top: 10px;
+    width: 70%;
+    margin-top: 20px;
     border-radius: 50%;
 }
 .section-1 img {
     width: 100%;
 }
 .section-2{
-    width:75%;
+    width:85%;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -182,6 +177,11 @@ a:hover{
     height: 100px;
     outline: none;
     border: none;
+    font-size: 28px;
+    padding-top: 20px;
+}
+.section-2 > input::placeholder{
+    font-size: 28px;
 }
 .section-3 {
     display: flex;
@@ -203,6 +203,7 @@ a:hover{
     border-radius: 100px;
     border: none;
     color: #FFF;
+    font-size: 20px;
 }
 .section-3 > button:hover{
     opacity: 0.8;
@@ -210,8 +211,8 @@ a:hover{
 }
 /* Utilities */
 .container{
-    padding-left:15%;
-    padding-right:15%;
+    padding-left:20%;
+    padding-right:20%;
 }
 .main-container{
     padding-left:8%;
