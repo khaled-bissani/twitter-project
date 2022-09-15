@@ -87,8 +87,7 @@ a:hover{
 .header-profile:hover{
     transition: 0.3;
     background: lightgrey;
-    border-radius: 100px;
-    
+    border-radius: 100px;    
 }
 .header-image{
     width: 20%;
@@ -154,6 +153,21 @@ a:hover{
 .tweet-section{
     width: 100%;
     border: 1px solid #A6A6A6;
+    display: flex;
+}
+.section-1{
+    width: 25%;
+}
+.section-1 > h1{
+    font-size: 24px;
+}
+.section-1 > div {
+    width: 20%;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.section-1 img {
+    width: 100%;
 }
 /* Utilities */
 .container{
