@@ -153,7 +153,7 @@ body{
     padding: 40px;
     background: #fff;
     border-radius: 5px;
-    width: 40%;
+    width: 35%;
     height: 70vh;
     overflow-y: auto;
     position: relative;
@@ -211,6 +211,11 @@ form > input:focus{
     border: 2px solid rgb(48, 159, 241);
 }
 
+.small-p{
+    font-size: 15px;
+    font-weight: lighter;
+    color: #7e7e7e;
+}
 
 
 
@@ -265,6 +270,11 @@ h5::first-letter{
     outline: rgb(205, 206, 207) solid 1px !important;
     margin: 10px;
     align-self: center;
+}
+
+.popup-btn{
+    width: 15vw;
+    height: 40px;
 }
 
 
