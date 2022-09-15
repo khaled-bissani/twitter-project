@@ -21,41 +21,15 @@ let emailFormat=/^[\w.-]{3,}@\w{5,}.*$/;
 let numberFormat=/^\+9613[0-9]{0,6}|\+9617[0-9]{0,7}/;
 
 // validate full name
-if (realname.value.length <= 5) {
+if (realname.value.length < 5) {
     realname.style.borderColor = "#FF0000";
-    $('name').attr('placeholder','Name length must be greater than 5 characters');
-}
-else {
-    document.getElementById('name').style.borderColor = '#00FF00.';
+    realname.value = 'Name must be greater than or equal 5 characters';
 }
 // validate email
-if (emailFormat.test(email.value)) {
-    document.getElementById('email').style.borderColor = 'green';
-    document.querySelector('.error-box2').textContent = '';
+if (!emailFormat.test(email.value)) {
+    email.style.borderColor = '#FF0000';
+    email.value = 'Wrong email format';
 }
-else {
-    document.querySelector('.error-box2').classList.add('error-message'); 
-    document.querySelector('.error-box2').textContent = '-Wrong email format';
-    document.getElementById('email').style.borderColor = '#ced4da';
-}
-// validate number
-if (numberFormat.test(number)) {
-    document.getElementById('number').style.borderColor = 'green';
-    document.querySelector('.error-box3').textContent = '';
-}
-else {
-    document.querySelector('.error-box3').classList.add('error-message'); 
-    document.querySelector('.error-box3').textContent = '-Wrong number format';
-    document.getElementById('number').style.borderColor = '#ced4da';
-}
-// validate message
-if (message.value.length<=100) {
-    document.querySelector('.error-box4').classList.add('error-message');
-    document.querySelector('.error-box4').textContent = '-Message is less than 100 characters';
-    document.getElementById('message').style.borderColor = '#ced4da';
-}
-else {
-    document.getElementById('message').style.borderColor = 'green';
-    document.querySelector('.error-box4').textContent = '';
-}
+
+
 }

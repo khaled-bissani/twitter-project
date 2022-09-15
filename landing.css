@@ -312,6 +312,7 @@ h5::first-letter{
 
 
 /* media queries */
+
 @media screen and (max-width: 900px) {
     .main-container{
         width: 100%;
