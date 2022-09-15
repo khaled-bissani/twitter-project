@@ -184,6 +184,10 @@ body{
     max-height: auto;
     overflow: auto;
 }
+.centerized{
+    align-self: center;
+    margin-top: 0%;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -204,7 +208,7 @@ form > input {
 }
 
 form > input:focus{
-    border: 2px solid rgb(3, 108, 219);
+    border: 2px solid rgb(48, 159, 241);
 }
 
 
@@ -267,6 +271,12 @@ h5::first-letter{
 #logo-div{
     width: 45px;
     margin-bottom: 2%;
+}
+
+.logo-img{
+    width: 45px;
+    margin-bottom: 2%;
+    margin-top: 0;
 }
 
 

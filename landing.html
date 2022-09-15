@@ -22,17 +22,18 @@
             <!-- Start log in pop up -->
             <div id="popup1" class="overlay">
                 <div class="popup">
-                    <h2 >Welcome back!</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <p>Thanks to pop me out of that button, but now i'm done so you can close this window.</p>
-                        <form>
-                            <label for="username">Username:</label>
-                            <input class="text-box" type="text" id="username" value="" />
-                            <label for="password">Password:</label>
-                            <input class="text-box" id="password" value="" />
-                            <button class="btns" id="login-btn">Log in</button>
-                        </form>
+                    <div  class="centerized">
+                        <img class="logo-img" class="centerized" src="./images/logosvg.png" alt="blue twitter logo">
+                        <h2 >Sign in to Twitter</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <form>
+                                <input class="text-box" type="text" id="username" placeholder="Username" value="" />
+                                <input class="text-box" id="password" placeholder="Password" value="" />
+                                <button class="btn black-btn" id="login-btn">Submit</button>
+                                <p class="centerized">Don't have an account? <a href="#popup2" >Sign up</a></p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
 
             <!-- Start sign up pop up -->
             <div id="popup2" class="overlay">
-                <div class="popup">
+                <div class="popup" >
                     <h2 class="text-style">Create your account</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
@@ -70,7 +71,7 @@
             </div>
             <div class="landing-content">
                 <h1>happening now</h1>
-                <h2>join twitter today</h2>
+                <h2>join Twitter today</h2>
                 <div class="app-download-links">
                     <a href="https://apps.apple.com/us/app/twitter/id333903271">
                         <img class="app-download" src="./images/applelogodark.jpg" alt="apple store download app">
