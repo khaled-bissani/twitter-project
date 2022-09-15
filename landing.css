@@ -185,6 +185,9 @@ body{
     max-height: auto;
     overflow: auto;
 }
+.pad{
+    padding: 5px !important;
+}
 .centerized{
     align-self: center;
     margin-top: 0%;
