@@ -71,6 +71,52 @@ a:hover{
 #check{
     display: none;
 }
+/* Header */
+.header-section{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-profile{
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 35%;
+}
+.header-profile:hover{
+    transition: 0.3;
+    background: lightgrey;
+    border-radius: 100px;    
+}
+.header-image{
+    width: 20%;
+    border-radius: 50%;
+}
+.header-image > img {
+    width: 100%;
+    vertical-align: middle;
+}
+.header-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 35%;
+}
+.header-name > p:first-child{
+    font-size: 20px;
+}
+.header-name > p:last-child{
+    font-size: 16px;
+    color: #5b6265;
+}
+.header-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 /*media query*/
 @media (max-width: 952px){
     label.logo{
