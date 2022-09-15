@@ -226,6 +226,24 @@ a:hover{
     nav ul li a{
         font-size: 16px;
     }
+    .header-profile{
+        width: 50%;
+    }
+    .header-image{
+        width: 30%;
+    }
+    .search{
+        margin-top: 15px;
+    }
+    .search input::placeholder{
+        font-size: 15px;
+    }
+    .section-1 > div{
+        width: 100%;
+    }
+    .section-2{
+        margin-left: 15px;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
