@@ -1,11 +1,14 @@
 console.log("hello twitter");
-var realname = document.getElementById('name');
-var email = document.getElementById('email');
-var username = document.getElementById('username');
-var phone = document.getElementById('phone');
-var password = document.getElementById('password');
-var passwordRepeated = document.getElementById('confirmpassword');
-var signUp = document.getElementById("signup-btn");
+const realname = document.getElementById('name');
+const email = document.getElementById('email');
+const username = document.getElementById('username');
+const phone = document.getElementById('phone');
+const password = document.getElementById('password');
+const passwordRepeated = document.getElementById('confirmpassword');
+const signUp = document.getElementById("signup-btn");
+
+const signUpForm = document.getElementById('form1');
+
 
 
 signUp.addEventListener('click',checkInformation);
