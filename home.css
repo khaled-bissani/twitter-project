@@ -323,7 +323,7 @@ ul a:hover{
     padding: 40px;
     background: #fff;
     border-radius: 5px;
-    width: 35%;
+    width: 70%;
     height: 70vh;
     overflow-y: auto;
     position: relative;
@@ -356,6 +356,33 @@ ul a:hover{
 }
 .pad{
     padding: 5px !important;
+}
+
+.tweet-section-editted{
+    width: 100%;
+    height: 80%;
+    margin: 0 !important;
+    padding: 20px;
+}
+.section-3-editted{
+    margin-bottom: 0px !important;
+    margin-top: 50px;
+}
+.section-1-editted {
+    margin-right: 50px !important;
+}
+.content-editted{
+    width: 100%;
+}
+.tweetcontent{
+    width: 80%;
+    height: 40%;
+    font-size: 20px;
+    text-align:start  !important;
+    text-justify: auto;
+    border: none;
+    outline: none;
+    
 }
 
 
