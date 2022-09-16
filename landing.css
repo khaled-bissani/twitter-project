@@ -286,6 +286,13 @@ h5::first-letter{
     margin: 10px;
     align-self: center;
 }
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  transform: none;
+}
 
 .popup-btn{
     width: 50%;

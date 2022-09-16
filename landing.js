@@ -1,3 +1,4 @@
+
 console.log("hello twitter");
 const realname = document.getElementById('name');
 const email = document.getElementById('email');
@@ -7,9 +8,13 @@ const password = document.getElementById('password');
 const passwordRepeated = document.getElementById('confirmpassword');
 const signUp = document.getElementById("signup-btn");
 
-const signUpForm = document.getElementById('form1');
 
-
+document.getElementById("signup1").onclick= () => {
+    document.forms["form2"].reset();
+};
+document.getElementById("signIn1").onclick= () => {
+    document.forms["form1"].reset();
+};
 
 signUp.addEventListener('click',checkInformation);
 function checkInformation() { 

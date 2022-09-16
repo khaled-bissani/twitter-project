@@ -10,11 +10,6 @@
 
 </head>
 <body>
-
-    
-
-
-
     <!-- every thing is contained in a main container -->
     <div class="main-container">
             <!--Start pop ups section-->
@@ -27,12 +22,12 @@
                             <img class="logo-img" class="centerized" src="./images/logosvg.png" alt="blue twitter logo">
                         </div> 
                         <h2 >Sign in to Twitter</h2>
-                        <a class="close" href="#">&times;</a>
+                        <a class="close" id="closepopup1" href="#">&times;</a>
                         <div class="content">
-                            <form>
+                            <form id="form1">
                                 <input class="text-box" type="text" id="username" placeholder="Username" value="" />
                                 <input class="text-box" id="password" placeholder="Password" value="" />
-                                <button class="btn black-btn popup-btn" id="sign-btn">Submit</button>
+                                <button disabled class="btn black-btn popup-btn" id="sign-btn">Submit</button>
                                 <p class="centerized small-p">Don't have an account? <a class="a-link" href="#popup2" >Sign up</a></p>
                             </form>
                         </div>
@@ -45,16 +40,16 @@
             <div id="popup2" class="overlay">
                 <div class="popup" >
                     <h2 class="text-style">Create your account</h2>
-                    <a class="close" href="#">&times;</a>
+                    <a class="close" id="closepopup2" href="#">&times;</a>
                     <div class="content">
-                        <form>
+                        <form id="form2">
                             <input type="text" class="text-box" id="name" placeholder="Name" value="" />
                             <input type="text" class="text-box" id="email" placeholder="Email" value="" />
                             <input type="text" class="text-box" id="username"placeholder="Username" value="" />
                             <input type="text" class="text-box" id="phone" placeholder="Phone" value="" />
                             <input type="text" class="text-box" id="password" placeholder="Password" value="" />
                             <input type="text" class="text-box" id="confirmpassword" placeholder="Confirm password" value="" />
-                            <button class="btn black-btn popup-btn" id="signup-btn">Create account</button>
+                            <button disabled class="btn black-btn popup-btn" id="signup-btn">Create account</button>
                         </form>
                     </div>
                 </div>
@@ -85,13 +80,13 @@
                 <div class="line">
                     <span>or</span>
                 </div>
-                <a  href="#popup2"><button class="btn" type="button">Sign up with phone or email</button></a>
+                <a  href="#popup2"><button class="btn" id="signup1" type="button">Sign up with phone or email</button></a>
                 <div id="condition">
                     <h5>By signing up, you agree to the<a class="a-link" href="https://twitter.com/en/tos"> Terms of Service</a> and <a class="a-link" href="https://twitter.com/en/privacy"> Privacy Policy</a>, including <a class="a-link" href="https://help.twitter.com/en/rules-and-policies/twitter-cookies" >Cookie Use</a>.</h5>
                 </div>
                 <div class="bottom-content">
                     <h3>Aready have an account?</h3>
-                    <a  href="#popup1"><button class="btn btn-white" type="button">Sign in</button></a>
+                    <a  href="#popup1"><button class="btn btn-white" id="signIn1" type="button">Sign in</button></a>
                 </div>
             </div>
         </div>
