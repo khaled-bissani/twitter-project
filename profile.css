@@ -211,6 +211,12 @@ ul a:hover{
     .search input::placeholder{
         font-size: 15px;
     }
+    .edit-profile{
+        margin-top:-30px;
+    }
+    .edit-profile > button{
+        font-size: 15px;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
