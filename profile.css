@@ -309,4 +309,20 @@ ul a:hover{
         width: 100%;
         height: 50px;
     }
+    .profile-cover{
+        min-height: 150px;
+    }
+    .profile-picture{
+        position: absolute;
+        border-radius: 50%;
+        width: 20%;
+        margin-top: -65px;
+    }
+    .edit-profile{
+        margin-top:10px;
+        margin-left: 5px;
+    }
+    .edit-profile > button{
+        font-size: 15px;
+    }
 }
