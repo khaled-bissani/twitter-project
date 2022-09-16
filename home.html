@@ -10,6 +10,32 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     </head>
     <body>
+
+         <!-- Start log in pop up -->
+        <div class="popups">
+            <!--Start tweet popup-->
+            <div id="tweetpopup" class="overlay">
+                <div class="popup" >
+                    <div class="tweet-section">
+                        <div class="section-1">
+                            <img id="user-profile-picture" src="profile-circle.png" />
+                        </div>
+                        <a class="close" id="closetweetpopup" href="#">&times;</a>
+                        <div class="content">
+                            <input id="tweet-content" placeholder="What's happening?"/>
+                            <div class="section-3">
+                                <i id="add-image" class="fa fa-image">
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </i>
+                                <button id="tweet-btn">Tweet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End tweet section -->
+            <!--End tweet popup-->
+        </div>
         <!--Start nav section-->
         <nav>
             <label for="check" class="checkbtn">Menu</label>
@@ -19,7 +45,7 @@
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">People</a></li>
-                <li><a href="#" class="tweet" id="nav-tweet-btn">Tweet</a></li>
+                <li><a href="#tweetpopup" class="tweet" id="nav-tweet-btn">Tweet</a></li>
             </ul>
         </nav>
         <!--End nav section-->
