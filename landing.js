@@ -65,10 +65,18 @@ function checkSignup() {
         passwordRepeated.style.backgroundColor = "#ffcccb"; 
         passwordRepeated.placeholder = "please enter a password number";}
 
-    /*else if (email.value != ''&& emailFormat.test(email.value) == false) {
+    //could not figure why the following conditions did not work 
+    else if (!emailFormat.test(email.value)) {
+        email.style.backgroundColor = "#ffcccb";
+        email.placeholder = "please enter an email address";}
+    else if (email.value != ''&& emailFormat.test(email.value) == false) {
         email.style.color = "#FF0000";
-        email.placeholder = "please enter a valid email address";}*/
+        email.placeholder = "please enter a valid email address";}
+    else if (passwordRepeated.value != password.value) {
+        passwordRepeated.style.backgroundColor = "#ffcccb"; 
+        passwordRepeated.placeholder = "password doen not match";}
     
+    //if any condition is not valid, keep the button disabled
 
     else {
         deactivate(signUp)
@@ -81,3 +89,4 @@ username.addEventListener('input', checkSignup)
 phone.addEventListener('input', checkSignup)
 password.addEventListener('input', checkSignup)
 passwordRepeated.addEventListener('input', checkSignup)
+
