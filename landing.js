@@ -1,20 +1,46 @@
 
 console.log("hello twitter");
+
 const realname = document.getElementById('name');
 const email = document.getElementById('email');
 const username = document.getElementById('username');
 const phone = document.getElementById('phone');
 const password = document.getElementById('password');
 const passwordRepeated = document.getElementById('confirmpassword');
+
 const signUp = document.getElementById("signup-btn");
 
-
+//to reset the forms when launching the pop ups
 document.getElementById("signup1").onclick= () => {
     document.forms["form2"].reset();
 };
 document.getElementById("signIn1").onclick= () => {
     document.forms["form1"].reset();
 };
+
+
+function activate(btn) {
+    btn.disabled = false;
+}
+  
+function deactivate(btn) {
+    btn.disabled = true;
+}
+
+deactivate(signUp);
+
+function check() {
+    if (realname.value != '' && email.value != '' /*&& email.checkValidity()*/) {
+        activate(signUp)
+    } 
+    else {
+        deactivate(signUp)
+    }
+}
+realname.addEventListener('input', check)
+email.addEventListener('input', check)
+
+
 
 signUp.addEventListener('click',checkInformation);
 function checkInformation() { 
