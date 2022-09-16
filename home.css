@@ -394,6 +394,17 @@ ul a:hover{
     .section-2{
         margin-left: 15px;
     }
+    .box{
+        width: 60%;
+        z-index: 1;
+    }
+    .popup{
+        width: 60%;
+        z-index: 1;
+    }
+    nav ul {
+        z-index: 0;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
@@ -439,6 +450,17 @@ ul a:hover{
     }
     .section-2{
         margin-left: 15px;
+    }
+    .box{
+        width: 60%;
+        z-index: 1;
+    }
+    .popup{
+        width: 60%;
+        z-index: 1;
+    }
+    nav ul {
+        z-index: 0;
     }
 }
 
@@ -515,5 +537,15 @@ ul a:hover{
     }
     .feed-like{
         margin:0;
+    }
+    .box{
+        width: 60%;
+    }
+    .popup{
+        z-index: 1;
+        width: 60%;
+    }
+    nav ul {
+        z-index: 0;
     }
 }
