@@ -4,13 +4,17 @@ console.log("hello twitter");
 const realname = document.getElementById('name');
 const email = document.getElementById('email');
 const username = document.getElementById('user-name');
-console.log(username);
-console.log(username.value);
 const phone = document.getElementById('phone');
 const password = document.getElementById('user-pass');
 const passwordRepeated = document.getElementById('confirmpassword');
 
 const signUp = document.getElementById("signup-btn");
+
+const userUsername = document.getElementById('user-username');
+const userPassword = document.getElementById('user-password');
+
+const signIn = document.getElementById("signIn-btn");
+
 
 //to reset the forms when launching the pop ups
 document.getElementById("signup1").onclick= () => {
@@ -30,6 +34,7 @@ function deactivate(btn) {
 }
 
 deactivate(signUp);
+deactivate(signIn);
 
 function checkSignup() {
     //regex to check email validity
@@ -83,10 +88,34 @@ function checkSignup() {
     }
 }
 
-realname.addEventListener('input', checkSignup)
-email.addEventListener('input', checkSignup)
-username.addEventListener('input', checkSignup)
-phone.addEventListener('input', checkSignup)
-password.addEventListener('input', checkSignup)
-passwordRepeated.addEventListener('input', checkSignup)
+realname.addEventListener('input', checkSignup);
+email.addEventListener('input', checkSignup);
+username.addEventListener('input', checkSignup);
+phone.addEventListener('input', checkSignup);
+password.addEventListener('input', checkSignup);
+passwordRepeated.addEventListener('input', checkSignup);
 
+function checkSignIn() {
+
+    if (userUsername.value != '' && userPassword.value != '' ) {
+        console.log('alsoooo all gooood');
+        activate(signIn)
+    }
+
+
+    else if (userUsername.value == '') {
+        userUsername.style.backgroundColor = "#ffcccb"; 
+        userUsername.placeholder = "please enter a username";}
+    
+    else if (userPassword.value == '') {
+        userPassword.style.backgroundColor = "#ffcccb"; 
+        userPassword.placeholder = "please enter a password";}
+    
+    else{
+        deactivate(signIn)
+    }
+
+};
+
+userUsername.addEventListener('input', checkSignIn);
+userPassword.addEventListener('input', checkSignIn);
