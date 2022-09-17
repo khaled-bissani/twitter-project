@@ -1,0 +1,618 @@
+/* Css Reset */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+/* Nav bar */
+nav{
+    background: #1D9BF0;
+    height: 80px;
+    width: 100%;
+}
+label > i{
+    margin-right:25px;
+    margin-top: 15px;
+}
+label.logo{
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 20px 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.tweet{
+    color: #fff;
+    background-color: #1D9BF0;
+    border-radius: 100px;
+}
+.tweet:hover {
+    transition: 0.3;
+    color: #1D9BF0;
+    background-color: #fff;
+}
+ul a:hover{
+    color: rgb(45, 62, 80);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* Header */
+.header-section{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-profile{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+.header-image{
+    width: 20%;
+    border-radius: 50%;
+}
+.header-image > a> img {
+    width: 100%;
+    vertical-align: middle;
+}
+.header-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 35%;
+}
+.header-name > a>  p:first-child{
+    font-size: 20px;
+}
+.header-name > p:last-child{
+    font-size: 16px;
+    color: #5b6265;
+}
+.header-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.header-option i{
+    cursor: pointer;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+    height: 50px;
+    background: #EFF3F4;
+    border-radius: 100px;
+    padding-left: 3%;
+    margin-top: 5px;
+}
+.search > div {
+    display: flex;
+    justify-content: start;
+} 
+.search i{
+    padding-bottom: 1px;
+    color: #1D9BF0;
+}
+#search-btn{
+    border: none;
+    cursor: pointer;
+}
+.search input{
+    outline: none;
+    border: none;
+    background-color: #EFF3F4;
+    padding-left: 5%;
+    padding-right: 1%;
+    width: 90%;
+}
+/* Tweet */
+.tweet-section{
+    border: 1px solid #A6A6A6;
+    display: flex;
+    justify-content: start;
+    margin-left: 30px;
+}
+.section-1{
+    width: 10%;
+    padding-left: 20px;
+}
+.section-1 > div {
+    width: 70%;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.section-1 img {
+    width: 100%;
+}
+.section-2{
+    width:85%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-2 > input{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    outline: none;
+    border: none;
+    font-size: 28px;
+    padding-top: 20px;
+}
+.section-2 > input::placeholder{
+    font-size: 28px;
+}
+.section-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.section-3 > label > i{
+    color: #1D9BF0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.section-3 > label > .fa{
+    font-size: 24px;
+}
+.section-3 > button{
+    width: 100px;
+    height: 50px;
+    background: #1D9BF0;
+    border-radius: 100px;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+}
+.section-3 > button:hover{
+    opacity: 0.8;
+    transition: 0.3;
+}
+#new-image{
+    display: none;
+}
+#new-image1{
+    display: none;
+}
+/* Feed */
+.feed-section{
+    border: 1px solid #A6A6A6;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    height: 100%;
+} 
+.tweet-feed{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+.feed-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.feed-header{
+    display: flex; 
+}
+.feed-header-username{
+    margin-left: 20px;
+    font-size: 14px;
+}
+.feed-option{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.feed-header-image{
+    width: 7%;
+    height: 7%;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.feed-header-image > a > img{
+    width: 100%;
+}
+.feed-information{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40%;
+}
+.feed-image{
+    width:80%;
+    height: 30%;
+}
+.feed-like{
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+}
+.feed-like > button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.feed-like i{
+    color: #000;
+}
+.feed-like p{
+    margin-left: 10px;
+}
+
+/* popups */
+.popups{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.box {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 70px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup h2 {
+    margin-top: 10px;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 36px;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: rgb(48, 159, 241);
+}
+.popup .content {
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    overflow: auto;
+}
+.pad{
+    padding: 5px !important;
+}
+
+.tweet-section-editted{
+    width: 100%;
+    height: 80%;
+    margin: 0 !important;
+    padding: 20px;
+    border-radius: 10px;
+}
+.section-3-editted{
+    margin-bottom: 0px !important;
+    margin-top: 50px;
+}
+.section-1-editted {
+    margin-right: 50px !important;
+}
+.content-editted{
+    width: 100%;
+}
+.tweetcontent{
+    width: 80%;
+    height: 40%;
+    font-size: 20px;
+    text-align:start  !important;
+    text-justify: auto;
+    border: none;
+    outline: none;
+    
+}
+
+.popup-editted{
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+}
+.option-btn{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    background: #1D9BF0;
+    border-radius: 100px;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.option-btn:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.popup-editted2{
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+}
+.header-profile-editted{
+    width: 80%;
+}
+/* Utilities */
+.container{
+    padding-left:20%;
+    padding-right:20%;
+}
+.main-container{
+    padding-left:8%;
+    padding-right:8%;
+}
+/*media query*/
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;}
+    nav ul li a{
+        font-size: 16px;
+    }
+    .header-profile{
+        width: 50%;
+    }
+    .header-image{
+        width: 30%;
+    }
+    .search{
+        margin-top: 15px;
+    }
+    .search input::placeholder{
+        font-size: 15px;
+    }
+    .section-1 > div{
+        width: 100%;
+    }
+    .section-2{
+        margin-left: 15px;
+    }
+    .box{
+        width: 60%;
+        z-index: 1;
+    }
+    .popup{
+        width: 60%;
+        z-index: 1;
+    }
+    nav ul {
+        z-index: 0;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        background: #1D9BF0;
+        top: -80%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+
+    }
+    #check:checked ~ ul{
+        top: 80px;
+    }
+    .header-profile{
+        width: 50%;
+    }
+    .header-image{
+        width: 30%;
+    }
+    .search{
+        margin-top: 15px;
+    }
+    .search input::placeholder{
+        font-size: 15px;
+    }
+    .section-1 > div{
+        width: 100%;
+    }
+    .section-2{
+        margin-left: 15px;
+    }
+    .box{
+        width: 60%;
+        z-index: 1;
+    }
+    .popup{
+        width: 60%;
+        z-index: 1;
+    }
+    nav ul {
+        z-index: 0;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        padding-left:70px;
+        padding-right:70px;
+    }
+    label.logo{
+        font-size: 25px;
+        /* padding: 0 10px; */
+    }
+    ul{
+        height: 40vh;
+    }
+    nav ul li a{
+        font-size: 18px;
+
+    }
+    nav ul li{
+        margin: 30px 0;
+    }
+    .header-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-profile{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .header-image{
+        margin-bottom: 8px;
+        width: 25%;
+    }
+    .header-name {
+       margin-right: 10px;
+    }
+    .header-name > p:first-child{
+        font-size: 20px;
+    }
+    .header-name > p:last-child{
+        font-size: 15px;
+    }
+    .search{
+        width: 100%;
+        height: 50px;
+    }
+    .section-1{
+        width: 20%;
+    }
+    .section-1 > div{
+        width: 100%;
+    }
+    .section-2{
+        margin-left: 15px;
+    }
+    .section-2 > input{
+        font-size: 20px;
+    }
+    .section-2 > input::placeholder{
+        font-size: 20px;
+    }
+    .section-3 > button{
+        width: 80px;
+        height: 40px;
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    .feed-header-image{
+        width: 20%;
+    }
+    .feed-content{
+        margin-left: 15px;
+    }
+    .feed-like{
+        margin:0;
+    }
+    .box{
+        width: 60%;
+    }
+    .popup{
+        z-index: 1;
+        width: 60%;
+    }
+    nav ul {
+        z-index: 0;
+    }
+}
