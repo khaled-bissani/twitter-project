@@ -319,8 +319,7 @@ ul a:hover{
     background: #fff;
     border-radius: 5px;
     width: 70%;
-    height: 70vh;
-    overflow-y: auto;
+    height: 100%;
     position: relative;
     transition: all 5s ease-in-out;
 }
@@ -340,10 +339,13 @@ ul a:hover{
 .popup .content {
     margin-top: 50px;
 }
+.scroll{
+    height: 90%;
+    overflow: auto;
+}
 .popup-editted{
     width: 40%;
     height: 100%;
-    overflow: hidden;
 }
 .profile-images{
     width: 100%;
@@ -389,15 +391,13 @@ ul a:hover{
 .edit-name > input, .edit-date > input {
     font-size: 14px;
     width: 97%;
-    height: 35px;
-    padding-top:15px;
+    height: 30px;
     padding-left: 9px;
   }
   
 .name-label, .date-label {
-    position: absolute;
+    /* position: absolute; */
     pointer-events: none;
-    left: 50px;
     font-weight: bold;
 }
 .save{
