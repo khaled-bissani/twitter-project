@@ -83,6 +83,39 @@ ul a:hover{
     display: flex;
     justify-content: center;
 }
+.header-profile{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+.header-image{
+    width: 20%;
+    border-radius: 50%;
+}
+.header-image > a> img {
+    width: 100%;
+    vertical-align: middle;
+}
+.header-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 35%;
+}
+.header-name > a>  p:first-child{
+    font-size: 20px;
+}
+.header-name > p:last-child{
+    font-size: 16px;
+    color: #5b6265;
+}
+.header-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 .search{
     display: flex;
     justify-content: center;

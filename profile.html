@@ -72,7 +72,27 @@
                     </div>
                 </div>
             </div>
-            <!-- End edit-popup-->    
+            <!-- End edit-popup-->   
+            <!--Start search-popup-->
+            <div id="search-popup" class="overlay pop">
+                <div class="popup popup-editted2" >
+                    <div class="search-popup-section">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content content-editted">
+                            <div class="header-profile header-profile-editted">
+                                <div class="header-image">
+                                    <a href="#"><img id="header-profile-image" src="profile-circle.png"/></a>
+                                </div>
+                                <div class="header-name">
+                                    <a href="#"><p id="header-user-name">Name</p></a>
+                                    <p id="header-user-username">Username</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!--End search-popup-->
         </div>
         <!-- End Popup section -->
         <!--Start nav section-->
@@ -91,7 +111,7 @@
         <div class="header-section container">
             <div class="search">
                 <div>
-                    <button id="search-btn"><i class="fa fa-search"></i></button>
+                    <a href="#search-popup"><button id="search-btn"><i class="fa fa-search"></i></button></a>
                     <input id="search-user" type="text" placeholder="Search Twitter"/>
                 </div>
             </div>
