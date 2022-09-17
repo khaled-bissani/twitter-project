@@ -275,6 +275,13 @@ ul a:hover{
     .edit-profile > button{
         font-size: 15px;
     }
+    .profile-date > div{
+        width: 3%;
+    }
+    .profile-date i{
+        font-size: 25px;
+        margin-top: -5px;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
