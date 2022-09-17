@@ -389,4 +389,10 @@ ul a:hover{
     .edit-profile > button{
         font-size: 15px;
     }
+    .profile-date > div{
+        width: 4%;
+    }
+    .profile-information{
+        margin-top: 50px;
+    }
 }
