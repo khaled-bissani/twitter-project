@@ -255,6 +255,7 @@ ul a:hover{
 }
 .tweets-header-image > img{
     width: 100%;
+    border-radius: 50%;
 }
 .tweets-information{
     margin-top: 10px;
@@ -322,6 +323,9 @@ ul a:hover{
         font-size: 25px;
         margin-top: -5px;
     }
+    .tweets-header-image{
+        width: 12%;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
@@ -361,6 +365,9 @@ ul a:hover{
     }
     .edit-profile > button{
         font-size: 15px;
+    }
+    .tweets-header-image{
+        width: 12%;
     }
 }
 @media (max-width: 500px){
@@ -411,5 +418,30 @@ ul a:hover{
     }
     .profile-information{
         margin-top: 50px;
+    }
+    .tweets-header{
+        font-size: 16px;
+    }
+    .tweets-header-username{
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .tweets-information{
+        font-size: 16px;
+    }
+    .tweets-image{
+        font-size: 16px;
+    }
+    .tweets-header-image{
+        width: 20%;
+    }
+    .tweets-content{
+        margin-left: 15px;
+    }
+    .tweets-like{
+        margin-right:-24px;
+    }
+    .tweets-like p{
+        font-size: 12px;
     }
 }
