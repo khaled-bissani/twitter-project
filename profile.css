@@ -207,6 +207,14 @@ ul a:hover{
     font-size: 20px;
     margin-top: -3px;
 }
+/* Tweets */
+.tweets-header{
+    margin-top: 70px;
+    margin-bottom: 5px;
+}
+.tweets-header > h2{
+    text-align: center;
+}
 /* Utilities */
 .container{
     padding-left:20%;
