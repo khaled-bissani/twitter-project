@@ -116,6 +116,9 @@ ul a:hover{
     justify-content: center;
     align-content: center;
 }
+.header-option i{
+    cursor: pointer;
+}
 .search{
     display: flex;
     justify-content: center;
@@ -134,7 +137,7 @@ ul a:hover{
 } 
 .search i{
     padding-bottom: 1px;
-    color: #6A767E;
+    color: #1D9BF0;
 }
 #search-btn{
     border: none;
@@ -191,12 +194,13 @@ ul a:hover{
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.section-3 > i{
+.section-3 > label > i{
     color: #1D9BF0;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
-.section-3 > .fa{
+.section-3 > label > .fa{
     font-size: 24px;
 }
 .section-3 > button{
@@ -211,6 +215,12 @@ ul a:hover{
 .section-3 > button:hover{
     opacity: 0.8;
     transition: 0.3;
+}
+#new-image{
+    display: none;
+}
+#new-image1{
+    display: none;
 }
 /* Feed */
 .feed-section{
@@ -249,7 +259,7 @@ ul a:hover{
     border-radius: 50%;
     margin-left: 15px;
 }
-.feed-header-image > img{
+.feed-header-image > a > img{
     width: 100%;
 }
 .feed-information{
@@ -270,6 +280,7 @@ ul a:hover{
 .feed-like > button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 .feed-like i{
     color: #000;
@@ -471,7 +482,7 @@ ul a:hover{
     ul{
         position: fixed;
         width: 100%;
-        height: 65vh;
+        height: 50vh;
         background: #1D9BF0;
         top: -80%;
         text-align: center;
@@ -530,7 +541,7 @@ ul a:hover{
         /* padding: 0 10px; */
     }
     ul{
-        height: 50vh;
+        height: 40vh;
     }
     nav ul li a{
         font-size: 18px;

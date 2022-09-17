@@ -24,9 +24,8 @@
                             <textarea id="tweet-content" class="tweetcontent" placeholder="What's happening?"></textarea>
                             <span id="tweetpopupcharactercounter">0/280</span>
                             <div class="section-3 section-3-editted">
-                                <i id="add-image" class="fa fa-image">
-                                    <input type="file" id="img" name="img" accept="image/*">
-                                </i>
+                                <label for="new-image1"><i id="add-image" class="fa fa-image"></i></label>
+                                <input type="file" id="new-image1" name="img" accept="image/*">
                                 <button id="tweet-btn">Tweet</button>
                             </div>
                         </div>
@@ -94,7 +93,6 @@
             <ul>
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">People</a></li>
                 <li><a href="#tweetpopup" class="tweet" id="nav-tweet-btn">Tweet</a></li>
             </ul>
         </nav>
@@ -134,9 +132,8 @@
                 <div class="section-2">
                     <input id="tweet-content" placeholder="What's happening?"/>
                     <div class="section-3">
-                        <i id="add-image" class="fa fa-image">
-                            <input type="file" id="img" name="img" accept="image/*">
-                        </i>
+                        <label for="new-image"><i id="add-image" class="fa fa-image"></i></label>
+                        <input type="file" id="new-image" name="img" accept="image/*">
                         <button id="tweet-btn">Tweet</button>
                     </div>
                 </div>
@@ -145,12 +142,12 @@
             <!-- Start feed section -->
             <div class="feed-section">
                 <div class="tweet-feed">
+                    <div class="feed-header-image">
+                        <a href="#"><img src="profile-circle.png" /></a>
+                    </div>
                     <div class="feed-content">
                         <div class="feed-header">
-                            <div class="feed-header-image">
-                                <img src="profile-circle.png" />
-                            </div>
-                            <p>Name</p>
+                            <a><p>Name</p></a>
                             <p class="feed-header-username">Username</p>
                             <div class="feed-option">
                                 <a id="news-feed-menu" href="#feed-option-popup"><i class="fa fa-ellipsis-h"></i></a>
