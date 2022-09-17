@@ -289,6 +289,7 @@ ul a:hover{
     font-size: 18px;
 }
 /* Popups */
+    /* Edit profile pop-up */
 .popups{
     display: flex;
     align-items: center;
@@ -343,6 +344,74 @@ ul a:hover{
     width: 40%;
     height: 100%;
     overflow: hidden;
+}
+.profile-images{
+    width: 100%;
+}
+.profile-cover{
+    width: 100%;
+    min-height: 250px;
+    background: gray;
+    object-fit: cover;
+    z-index: -100;
+    border-radius: 5px;
+    display: flex;
+    justify-content: end;
+}
+.profile-cover > input{
+    display: none;
+}
+.profile-cover > label > i{
+    color: #fff;
+}
+.profile-picture{
+    border-radius: 50%;
+    width: 15%;
+    margin-top: -75px;
+    margin-left: 30px;
+}
+.profile-picture > label > img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profile-picture > input{
+    display: none;
+}
+.edit-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+}
+.edit-name, .edit-date{
+    margin-top: 25px;
+}
+.edit-name > input, .edit-date > input {
+    font-size: 14px;
+    width: 97%;
+    height: 35px;
+    padding-top:15px;
+    padding-left: 9px;
+  }
+  
+.name-label, .date-label {
+    position: absolute;
+    pointer-events: none;
+    left: 50px;
+    font-weight: bold;
+}
+.save{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.save > button{
+    width: 70px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background-color: #1D9BF0;
 }
 /* Utilities */
 .container{
