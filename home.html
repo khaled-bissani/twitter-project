@@ -13,7 +13,7 @@
 
         <div class="popups">
             <!--Start tweet popup-->
-            <div id="tweetpopup" class="overlay">
+            <div id="tweetpopup" class="overlay pop">
                 <div class="popup" >
                     <div class=" tweet-section tweet-section-editted">
                         <div class="section-1 section-1-editted">
@@ -36,13 +36,13 @@
             <!--End tweet popup-->
 
             <!--Start user-option-popup-->
-                <div id="user-option-popup" class="overlay">
+                <div id="user-option-popup" class="overlay pop">
                     <div class="popup popup-editted" >
                         <div class="user-option-popup-section">
                             <a class="close" href="#">&times;</a>
                             <div class="content content-editted">
                                 <a href="#landing-page"><button class="option-btn" id="sign-out">Sign out</button></a>
-                                <a href="#landing-page"><button class="option-btn" id="add-user">Add Existing user</button></a>
+                                <a href=".landing.html/#sign-in-popup"><button class="option-btn" id="add-user">Add Existing user</button></a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
             <!--End user-option-popup-->
 
             <!--Start feed-option-popup-->
-            <div id="feed-option-popup" class="overlay">
+            <div id="feed-option-popup" class="overlay pop">
                 <div class="popup popup-editted" >
                     <div class="user-option-popup-section">
                         <a class="close" href="#">&times;</a>
@@ -61,9 +61,30 @@
                     </div>
                 </div>
             </div>
+            <!--End feed-option-popup-->
+
+            <!--Start search-popup-->
+            <div id="search-popup" class="overlay pop">
+                <div class="popup popup-editted2" >
+                    <div class="search-popup-section">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content content-editted">
+                            <div class="header-profile header-profile-editted">
+                                <div class="header-image">
+                                    <a href="#"><img id="header-profile-image" src="profile-circle.png"/></a>
+                                </div>
+                                <div class="header-name">
+                                    <a href="#"><p id="header-user-name">Name</p></a>
+                                    <p id="header-user-username">Username</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!--End feed-option-popup-->
         </div>
-        <!--End of pooups-->
+        <!--End of popups-->
 
         <!--Start nav section-->
         <nav>
@@ -96,7 +117,7 @@
             </div>
             <div class="search">
                 <div>
-                    <button id="search-btn"><i class="fa fa-search"></i></button>
+                    <a href="#search-popup"><button id="search-btn"><i class="fa fa-search"></i></button></a>
                     <input id="search-user" type="text" placeholder="Search Twitter"/>
                 </div>
             </div>
@@ -151,5 +172,6 @@
             </div>
             <!-- End feed section -->
         </div>
+        <script src="myscript.js"></script>
     </body>
 </html>

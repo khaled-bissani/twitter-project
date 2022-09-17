@@ -407,7 +407,14 @@ ul a:hover{
     opacity: 0.8;
     transition: 0.5s;
 }
-
+.popup-editted2{
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+}
+.header-profile-editted{
+    width: 80%;
+}
 /* Utilities */
 .container{
     padding-left:20%;
