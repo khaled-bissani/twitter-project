@@ -276,12 +276,6 @@ ul a:hover{
     margin-left: 20px;
     font-size: 14px;
 }
-.tweets-option{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    cursor: pointer;
-}
 .tweets-header-image{
     width: 7%;
     height: 7%;
