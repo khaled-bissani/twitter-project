@@ -226,6 +226,8 @@ ul a:hover{
     }
     .search{
         margin-top: 15px;
+        width: 70%;
+        height: 50px;
     }
     .search input::placeholder{
         font-size: 15px;
