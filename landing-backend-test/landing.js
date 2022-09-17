@@ -126,9 +126,9 @@ userPassword.addEventListener('input', checkSignIn);
 
 const signupbtn = document.getElementById('#signup-btn');
 console.log(signupbtn);
-signupbtn.addEventListener('click' , fetchApi);
+signupbtn.addEventListener('click' , fetchSignUpApi);
 
-function fetchApi(){
+function fetchSignUpApi(){
     let payload = {
         a: 1,
         b: 2
@@ -146,7 +146,27 @@ function fetchApi(){
     .then(function(data){ alert( JSON.stringify( data ) ) })
 }
 
+const signInbtn = document.getElementById('#signIn-btn');
+console.log(signInbtn);
+signInbtn.addEventListener('click' , fetchLogInApi);
 
+function fetchLogInApi(){
+    let payload = {
+        a: 1,
+        b: 2
+    };
+    
+    let data = new FormData();
+    data.append( "json", JSON.stringify( payload ) );
+    
+    fetch("/echo/json/",
+    {
+        method: "POST",
+        body: data
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){ alert( JSON.stringify( data ) ) })
+}
 
 
 
