@@ -148,7 +148,7 @@ ul a:hover{
     margin-right: 40px;
     margin-top: -80px;
 }
-.edit-profile > button{
+.edit-profile > a > button{
     font-size: 20px;
     padding: 3px 15px;
     border-radius: 100px;
@@ -287,6 +287,62 @@ ul a:hover{
 .tweets-like p{
     margin-left: 10px;
     font-size: 18px;
+}
+/* Popups */
+.popups{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    display: flex;
+    flex-direction: column;
+    margin: 70px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: rgb(48, 159, 241);
+}
+.popup .content {
+    margin-top: 50px;
+}
+.popup-editted{
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
 }
 /* Utilities */
 .container{
