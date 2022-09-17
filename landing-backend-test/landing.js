@@ -129,6 +129,7 @@ console.log(signupbtn);
 signupbtn.addEventListener('click' , fetchSignUpApi);
 
 function fetchSignUpApi(){
+    e.preventDefault();
     let payload = {
         a: 1,
         b: 2

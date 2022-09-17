@@ -19,9 +19,9 @@ $query = $mysqli->prepare("INSERT INTO users(fullname, dob, email, password, pho
 $query->bind_param("ssssss", $fullname, $dob, $email, $password, $phonenumber, $username);
 $query->execute();
 
-$response = [];
+/*$response = [];
 $response["success"] = true;
+echo json_encode($response);*/
 
-echo json_encode($response);
 
 ?>

@@ -8,9 +8,10 @@ $message = "";
 if (count($_POST) > 0) {
     $isSuccess = 0;
     $username = $_POST['username'];
-    $sql = "SELECT * FROM users WHERE username= ?";
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM users WHERE username= ? And password= ?";
     $statement = $mysqli->prepare($sql);
-    $statement->bind_param('s', $username);
+    $statement->bind_param('ss', $username, $password);
     $statement->execute();
     $result = $statement->get_result();
     while ($row = $result->fetch_assoc()) {
