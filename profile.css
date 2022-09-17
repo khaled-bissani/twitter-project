@@ -81,49 +81,15 @@ ul a:hover{
     margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
-    justify-content: space-between;
-}
-.header-profile{
-    display: flex;
-    justify-content: space-evenly;
-    width: 35%;
-}
-.header-image{
-    width: 20%;
-    border-radius: 50%;
-}
-.header-image > a > img {
-    width: 100%;
-    border-radius: 50%;
-    vertical-align: middle;
-}
-.header-name{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    width: 35%;
-}
-.header-name > a > p:first-child{
-    font-size: 20px;
-}
-.header-name > p:last-child{
-    font-size: 16px;
-    color: #5b6265;
-}
-.header-option{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
 }
 .search{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
-    width: 30%;
-    height: 50px;
+    width: 60%;
+    height: 60px;
     background: #EFF3F4;
     border-radius: 100px;
     padding-left: 3%;
@@ -136,6 +102,7 @@ ul a:hover{
 .search i{
     padding-bottom: 1px;
     color: #6A767E;
+    font-size: 18px;
 }
 #search-btn{
     border: none;
@@ -148,10 +115,10 @@ ul a:hover{
     padding-left: 5%;
     padding-right: 1%;
     width: 90%;
-    font-size: 16px;
+    font-size: 20px;
 }
 .search input::placeholder{
-    font-size: 15px;
+    font-size: 18px;
 }
 /* Profile */
 .profile-images{
@@ -257,12 +224,6 @@ ul a:hover{
     nav ul li a{
         font-size: 16px;
     }
-    .header-profile{
-        width: 50%;
-    }
-    .header-image{
-        width: 30%;
-    }
     .search{
         margin-top: 15px;
     }
@@ -310,12 +271,6 @@ ul a:hover{
     #check:checked ~ ul{
         top: 80px;
     }
-    .header-profile{
-        width: 50%;
-    }
-    .header-image{
-        width: 30%;
-    }
     .search{
         margin-top: 15px;
     }
@@ -351,23 +306,6 @@ ul a:hover{
     .header-section{
         display: flex;
         flex-direction: column;
-    }
-    .header-profile{
-        width: 100%;
-        margin: 20px 0;
-    }
-    .header-image{
-        margin-bottom: 8px;
-        width: 25%;
-    }
-    .header-name {
-       margin-right: 10px;
-    }
-    .header-name > p:first-child{
-        font-size: 20px;
-    }
-    .header-name > p:last-child{
-        font-size: 15px;
     }
     .search{
         width: 100%;
