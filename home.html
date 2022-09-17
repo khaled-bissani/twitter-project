@@ -11,7 +11,6 @@
     </head>
     <body>
 
-         <!-- Start log in pop up -->
         <div class="popups">
             <!--Start tweet popup-->
             <div id="tweetpopup" class="overlay">
@@ -34,9 +33,38 @@
                     </div>
                 </div>
             </div>
-            <!-- End tweet section -->
             <!--End tweet popup-->
+
+            <!--Start user-option-popup-->
+                <div id="user-option-popup" class="overlay">
+                    <div class="popup popup-editted" >
+                        <div class="user-option-popup-section">
+                            <a class="close" href="#">&times;</a>
+                            <div class="content content-editted">
+                                <a href="#landing-page"><button class="option-btn" id="sign-out">Sign out</button></a>
+                                <a href="#landing-page"><button class="option-btn" id="add-user">Add Existing user</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--End user-option-popup-->
+
+            <!--Start feed-option-popup-->
+            <div id="feed-option-popup" class="overlay">
+                <div class="popup popup-editted" >
+                    <div class="user-option-popup-section">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content content-editted">
+                            <button class="option-btn" id="sign-out">Block</button>
+                            <button class="option-btn" id="add-user">Unfollow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--End feed-option-popup-->
         </div>
+        <!--End of pooups-->
+
         <!--Start nav section-->
         <nav>
             <label for="check" class="checkbtn">Menu</label>
@@ -61,7 +89,7 @@
                     <p id="header-user-username">Username</p>
                 </div>
                 <div class="header-option">
-                    <a href="#">
+                    <a href="#user-option-popup" id="user-options-menu">
                         <i class="fa fa-ellipsis-h"></i>
                     </a>
                 </div>
@@ -104,7 +132,7 @@
                             <p>Name</p>
                             <p class="feed-header-username">Username</p>
                             <div class="feed-option">
-                                <a id="news-feed-menu" href="#"><i class="fa fa-ellipsis-h"></i></a>
+                                <a id="news-feed-menu" href="#feed-option-popup"><i class="fa fa-ellipsis-h"></i></a>
                             </div>
                         </div>
                         <div class="feed-information">

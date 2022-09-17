@@ -363,6 +363,7 @@ ul a:hover{
     height: 80%;
     margin: 0 !important;
     padding: 20px;
+    border-radius: 10px;
 }
 .section-3-editted{
     margin-bottom: 0px !important;
@@ -385,6 +386,27 @@ ul a:hover{
     
 }
 
+.popup-editted{
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+}
+.option-btn{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    background: #1D9BF0;
+    border-radius: 100px;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.option-btn:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
 
 /* Utilities */
 .container{
