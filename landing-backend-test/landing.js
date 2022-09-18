@@ -126,28 +126,47 @@ userPassword.addEventListener('input', checkSignIn);
 
 const signupbtn = document.getElementById('#signup-btn');
 console.log(signupbtn);
-signupbtn.addEventListener('click' , fetchSignUpApi);
+let signupname = document.getElementById("name").value;
+let signupemail = document.getElementById("email"),value;
+let signupusername = document.getElementById("user-name").value;
+let signupphone = document.getElementById("phone").value;
+let signuppass = document.getElementById("user-pass").value;
+let dob = document.getElementById("dob").value;
+signupbtn.addEventListener('click', () => {console.log("hiiiii")});
+let data = {
+    "name": signupname, 
+    "email": email,
+    "username" : signupusername,
+    "phone": signupphone,
+    "password":  signuppass,
+    "dob": dob
+};
+console.log(data);
 
-function fetchSignUpApi(){
-    e.preventDefault();
-    let payload = {
-        a: 1,
-        b: 2
-    };
+
+
+
+/*signupbtn.onclick = () => {
+    // data to be sent to the POST request
+    let _data = {
+        title: "foo",
+        body: "bar", 
+        userId:1
+    }
     
-    let data = new FormData();
-    data.append( "json", JSON.stringify( payload ) );
-    
-    fetch("/echo/json/",
-    {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
         method: "POST",
-        body: data
+        body: JSON.stringify(_data),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
     })
-    .then(function(res){ return res.json(); })
-    .then(function(data){ alert( JSON.stringify( data ) ) })
-}
+    .then(response => response.json()) 
+    .then(json => console.log(json));
+    .catch(err => console.log(err));
+};*/
 
-const signInbtn = document.getElementById('#signIn-btn');
+
+
+/*const signInbtn = document.getElementById('#signIn-btn');
 console.log(signInbtn);
 signInbtn.addEventListener('click' , fetchLogInApi);
 
@@ -167,7 +186,7 @@ function fetchLogInApi(){
     })
     .then(function(res){ return res.json(); })
     .then(function(data){ alert( JSON.stringify( data ) ) })
-}
+}*/
 
 
 

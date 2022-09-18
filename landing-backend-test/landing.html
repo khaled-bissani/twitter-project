@@ -24,7 +24,7 @@
                         <h2 >Sign in to Twitter</h2>
                         <a class="close" id="closepopup1" href="#">&times;</a>
                         <div class="content">
-                            <form id="form1" action="http://localhost/twitter-project/apis/login.php" method="POST">
+                            <form id="form1" method="POST">
                                 <input class="text-box" type="text" name="username" id="user-username" placeholder="Username" value="" required />
                                 <input class="text-box" type="password" name="password" id="user-password" placeholder="Password" value="" required/>
                                 <button disabled class="btn black-btn popup-btn" id="signIn-btn">Submit</button>
@@ -42,7 +42,7 @@
                     <h2 class="text-style">Create your account</h2>
                     <a class="close" id="closepopup2" href="#">&times;</a>
                     <div class="content">
-                        <form id="form2" action="http://localhost/twitter-project/apis/add-user.php" method="POST">
+                        <form id="form2" method="POST">
                             <input type="text" class="text-box" name="fullname" id="name" placeholder="Name" value="" />
                             <input type="text" class="text-box" name="email" id="email" placeholder="Email" value="" />
                             <input type="text" class="text-box" name="username" id="user-name" placeholder="Username" value=""/>
@@ -50,7 +50,7 @@
                             <input type="password" class="text-box" name="password" id="user-pass" placeholder="Password"  />
                             <input type="password" class="text-box" id="confirmpassword" placeholder="Confirm password" value="" />
                             <input type="date" class="text-box" name="dob" id="dob" placeholder="dateOfbirth" />
-                            <a href="home.html"><button class="btn black-btn popup-btn" id="signup-btn" onSubmit=window.location='http://google.com'>Create account</button></a>
+                            <a href="home.html"><button class="btn black-btn popup-btn" id="signup-btn">Create account</button></a>
                         </form>
                     </div>
                 </div>
