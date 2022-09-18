@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter. It's what's happening.</title>
+    <link rel="icon" href="./images/logosvg.png" type="image/icon type">
+    <link rel="stylesheet" href="landing.css">
+
+</head>
+<body>
+    <!-- every thing is contained in a main container -->
+    <div class="main-container">
+            <!--Start pop ups section-->
+        <div class="popups">
+            <!-- Start log in pop up -->
+            <div id="popup1" class="overlay">
+                <div class="popup pad"  >
+                    <div  class="centerized">
+                        <div class="popup-logo-div">
+                            <img class="logo-img" class="centerized" src="./images/logosvg.png" alt="blue twitter logo">
+                        </div> 
+                        <h2 id="pop1h2">Sign in to Twitter</h2>
+                        <a class="close" id="closepopup1" href="#">&times;</a>
+                        <div class="content">
+                            <form id="form1">
+                                <input class="text-box" type="text" name="username" id="user-username" placeholder="Username" value="" required />
+                                <input class="text-box" type="password" name="password" id="user-password" placeholder="Password" value="" required/>
+                                <button disabled class="btn black-btn popup-btn" id="signIn-btn">Submit</button>
+                                <p class="centerized small-p">Don't have an account? <a class="a-link" href="#popup2" >Sign up</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End log in pop up --> 
+
+            <!-- Start sign up pop up -->
+            <div id="popup2" class="overlay">
+                <div class="popup" >
+                    <h2 class="text-style">Create your account</h2>
+                    <a class="close" id="closepopup2" href="#">&times;</a>
+                    <div class="content">
+                        <form id="form2" method="POST">
+                            <input type="text" class="text-box" name="fullname" id="name" placeholder="Name"/>
+                            <input type="text" class="text-box" name="email" id="email" placeholder="Email"/>
+                            <input type="text" class="text-box" name="username" id="user-name" placeholder="Username"/>
+                            <input type="text" class="text-box" name="phonenumber" id="phone" placeholder="Phone"/>
+                            <input type="password" class="text-box" name="password" id="user-pass" placeholder="Password"/>
+                            <input type="password" class="text-box" id="confirmpassword" placeholder="Confirm password"/>
+                            <input type="date" class="text-box" name="dob" id="dob" placeholder="dateOfbirth"/>
+                            <button type="button" class="btn black-btn popup-btn" id="signup-btn">Create account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End sign up pop up -->
+        </div>
+        <!--End pop ups section-->
+        <!-- this right div contains the big image -->
+        <div class="right-div">
+            <img src="./images/Screenshot 2022-09-07 162020.png" alt="It's what's happening">
+        </div>
+        <!-- this left div containt the whole left content -->
+        <div class="left-div">
+            <div>
+                <img id="logo-div" src="./images/logosvg.png" alt="twitter-logo">
+            </div>
+            <div class="landing-content">
+                <h1>happening now</h1>
+                <h2>join Twitter today</h2>
+                <div class="app-download-links">
+                    <a href="https://apps.apple.com/us/app/twitter/id333903271">
+                        <img class="app-download" src="./images/applelogodark.jpg" alt="apple store download app">
+                    </a>
+                    <a href="https://play.google.com/store/search?q=twitter&c=apps&hl=en&gl=US">
+                        <img class="app-download" src="./images/googleplay.jpg" alt="google store download app">
+                    </a>
+                </div>
+                <div class="line">
+                    <span>or</span>
+                </div>
+                <a  href="#popup2"><button class="btn" id="signup1" type="button">Sign up with phone or email</button></a>
+                <div id="condition">
+                    <h5>By signing up, you agree to the<a class="a-link" href="https://twitter.com/en/tos"> Terms of Service</a> and <a class="a-link" href="https://twitter.com/en/privacy"> Privacy Policy</a>, including <a class="a-link" href="https://help.twitter.com/en/rules-and-policies/twitter-cookies" >Cookie Use</a>.</h5>
+                </div>
+                <div class="bottom-content">
+                    <h3>Aready have an account?</h3>
+                    <a  href="#popup1"><button class="btn btn-white" id="signIn1" type="button">Sign in</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>
