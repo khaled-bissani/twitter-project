@@ -1,11 +1,9 @@
 <?php
-include("connection.php");
 header('Access-Control-Allow-Origin: *');
-
 header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-header("Access-Control-Allow-Headers: X-Requested-With");
-
+include("connection.php");
 
 $fullname = $_POST["fullname"];
 $dob = $_POST["dob"];
@@ -23,6 +21,5 @@ $query->execute();
 $response = [];
 $response["success"] = true;
 echo json_encode($response);
-
 
 ?>

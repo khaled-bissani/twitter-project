@@ -143,11 +143,10 @@ signupbtn.onclick = () => {
         "username" : signupusername.value,
         "phone": signupphone.value,
         "password":  signuppass.value,
-        "dob": dob
+        "dob": dob.value
     }
     console.log(data);
     fetch('http://localhost/twitter-project/add-user.php', {
-        mode: 'no-cors',
         method: "POST",
         body: JSON.stringify(data),
         headers: {"Content-type": "application/json; charset=UTF-8"}
