@@ -42,8 +42,8 @@ function checkSignup() {
     //regex to check phone number validity
     let numberFormat=/^\+9613[0-9]{0,6}|\+9617[0-9]{0,7}/;
 
-    if (realname.value != '' && email.value != '' && emailFormat.test(email.value) && username.value != '' && phone.value!= '' && numberFormat.test(phone.value) && password.value != '' && passwordRepeated.value != '' && passwordRepeated.value == password.value) {
-        console.log('all gooood');
+    if (realname.value != '' && email.value != '' && emailFormat.test(email.value) && username.value != '' && phone.value!= '' && numberFormat.test(phone.value) && password.value != '' && passwordRepeated.value != '' && passwordRepeated.value == password.value) 
+    {
         activate(signUp)
     }
     else if (realname.value == '') {
@@ -122,26 +122,40 @@ userPassword.addEventListener('input', checkSignIn);
 
 
 
-////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const signupbtn = document.getElementById('#signup-btn');
+const signupbtn = document.getElementById('signup-btn');
 console.log(signupbtn);
+
 let signupname = document.getElementById("name").value;
-let signupemail = document.getElementById("email"),value;
+let signupemail = document.getElementById("email").value;
 let signupusername = document.getElementById("user-name").value;
 let signupphone = document.getElementById("phone").value;
 let signuppass = document.getElementById("user-pass").value;
 let dob = document.getElementById("dob").value;
-signupbtn.addEventListener('click', () => {console.log("hiiiii")});
-let data = {
-    "name": signupname, 
-    "email": email,
-    "username" : signupusername,
-    "phone": signupphone,
-    "password":  signuppass,
-    "dob": dob
+
+
+signupbtn.onclick = () => {
+    // data to be sent to the POST request
+    let data = {
+        "name": signupname, 
+        "email": email,
+        "username" : signupusername,
+        "phone": signupphone,
+        "password":  signuppass,
+        "dob": dob
+    }
+    console.log(data);
+    fetch('http://localhost/twitter-project/add-user.php', {
+        mode: 'no-cors',
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json())
+    .then(json => console.log(json));
 };
-console.log(data);
+
 
 
 
