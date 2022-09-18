@@ -127,22 +127,22 @@ userPassword.addEventListener('input', checkSignIn);
 const signupbtn = document.getElementById('signup-btn');
 console.log(signupbtn);
 
-let signupname = document.getElementById("name").value;
-let signupemail = document.getElementById("email").value;
-let signupusername = document.getElementById("user-name").value;
-let signupphone = document.getElementById("phone").value;
-let signuppass = document.getElementById("user-pass").value;
-let dob = document.getElementById("dob").value;
+let signupname = document.getElementById("name");
+let signupemail = document.getElementById("email");
+let signupusername = document.getElementById("user-name");
+let signupphone = document.getElementById("phone");
+let signuppass = document.getElementById("user-pass");
+let dob = document.getElementById("dob");
 
 
 signupbtn.onclick = () => {
     // data to be sent to the POST request
     let data = {
-        "name": signupname, 
-        "email": email,
-        "username" : signupusername,
-        "phone": signupphone,
-        "password":  signuppass,
+        "name": signupname.value, 
+        "email": signupemail.value,
+        "username" : signupusername.value,
+        "phone": signupphone.value,
+        "password":  signuppass.value,
         "dob": dob
     }
     console.log(data);

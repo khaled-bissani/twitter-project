@@ -6,6 +6,7 @@ header('Access-Control-Allow-Methods: GET, POST');
 
 header("Access-Control-Allow-Headers: X-Requested-With");
 
+
 $fullname = $_POST["fullname"];
 $dob = $_POST["dob"];
 $email = $_POST["email"];
