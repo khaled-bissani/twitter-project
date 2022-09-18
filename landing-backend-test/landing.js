@@ -132,12 +132,16 @@ userPassword.addEventListener('input', checkSignIn);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+async function getapi(url) {
+    // Storing response
+    const response = await fetch(url);
+    // Storing data in form of JSON
+    var data = await response.json();
+    return data;
+}
+///////////////////////////////////////////////////////////////////////////////
 
 const signupbtn = document.getElementById('signup-btn');
-console.log(signupbtn);
-
-
-
 
 signupbtn.onclick = () => {
 
@@ -150,6 +154,16 @@ signupbtn.onclick = () => {
         "password":  localStorage.getItem('password'),
         "dob": localStorage.getItem('dob'),
     }
+    fetch("http://localhost/twitter-project/add-user.php", 
+    {
+        method: "POST",
+        body: JSON.stringify(data),
+        //headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json()) 
+    .then(json => console.log(json));
+    console.log(JSON.stringify(data))
+};
     //console.log(data);
     //window.localStorage.setItem("data", "tessssssssst");
     //console.log(window.localStorage.getItem(data));
@@ -193,13 +207,11 @@ signupbtn.onclick = () => {
         return data;
     }
 }*/
-    fetch("http://localhost/twitter-project/add-user.php", 
-    {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
-    })
-    .then(response => response.json()) 
-    .then(json => console.log(json));
-    console.log(JSON.stringify(data))
-    };
+/////////////////////////////////////////////////////////////////////////////////
+/*const signInbtn = document.getElementById('signIp-btn');
+
+signInbtn.onclick = () => {
+    let username = document.getElementById('user-username');
+
+}*/
+
