@@ -3,6 +3,17 @@ console.log("IN home");
 //console.log(lastTweet)
 //let lastTweetId = lastTweet.getAttribute('id');
 //console.log("last id = " + lastTweetId);
+async function getapi(url) {
+    // Storing response
+    const response = await fetch(url);
+    // Storing data in form of JSON
+    var data = await response.json();
+    return data;
+}
+
+window.addEventListener = ('load', getDogResult())
+
+
 let incrementId = 100;
 // Create a clone of element with id ddl_1:
 let clone = document.querySelector('.feed-section').cloneNode( true );
