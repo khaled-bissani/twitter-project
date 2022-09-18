@@ -208,23 +208,35 @@ signupbtn.onclick = () => {
     }
 }*/
 /////////////////////////////////////////////////////////////////////////////////
-const signInbtn = document.getElementById('signIp-btn');
-
+const signInbtn = document.getElementById('signIn-btn');
+console.log(signInbtn);
 signInbtn.onclick = () => {
     let logging = document.getElementById('user-username');
     let username = logging.value;
+    let password = document.getElementById('user-password').value;
     console.log(username);
+    console.log(password);
+    console.log("///////////");
     let url = "http://localhost/twitter-project/getUsernames.php?username="+username;
     let user = getapi(url);
-    console.log(user);
-    /*const getAge= () => {
+    const getuser= () => {
         user.then((a) => {
-            results = "\nPredicted age is: " +a.age + "\n";
-            var y = document.createTextNode(results);
+            let x = a[0].username;
+            let y = a[0].password;
+            console.log(x +" "+ y);
+            if(y == password){
+                window.location.replace('home.html');
+            }
+            else{
+                //var w = document.createTextNode("Invalid credentials");
+                var popcontent = document.getElementById("pop1h2");
+                popcontent.innerText = "Invalid credentials";
+            }
+            //var y = document.createTextNode(results);
             //appendig this result to the paragraph of all outputs
-            output_results.appendChild(y);
+            //output_results.appendChild(y);
         });
     };
-    getAge();*/
+    getuser();
 }
 
