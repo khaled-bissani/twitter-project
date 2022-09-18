@@ -21,12 +21,12 @@
                         <div class="popup-logo-div">
                             <img class="logo-img" class="centerized" src="./images/logosvg.png" alt="blue twitter logo">
                         </div> 
-                        <h2 >Sign in to Twitter</h2>
+                        <h2 id="pop1h2">Sign in to Twitter</h2>
                         <a class="close" id="closepopup1" href="#">&times;</a>
                         <div class="content">
                             <form id="form1">
-                                <input class="text-box" type="text" id="user-username" placeholder="Username" value="" />
-                                <input class="text-box" id="user-password" placeholder="Password" value="" />
+                                <input class="text-box" type="text" name="username" id="user-username" placeholder="Username" value="" required />
+                                <input class="text-box" type="password" name="password" id="user-password" placeholder="Password" value="" required/>
                                 <button disabled class="btn black-btn popup-btn" id="signIn-btn">Submit</button>
                                 <p class="centerized small-p">Don't have an account? <a class="a-link" href="#popup2" >Sign up</a></p>
                             </form>
@@ -42,14 +42,15 @@
                     <h2 class="text-style">Create your account</h2>
                     <a class="close" id="closepopup2" href="#">&times;</a>
                     <div class="content">
-                        <form id="form2">
-                            <input type="text" class="text-box" id="name" placeholder="Name" value="" />
-                            <input type="text" class="text-box" id="email" placeholder="Email" value="" />
-                            <input type="text" class="text-box" id="user-name" placeholder="Username" value=""/>
-                            <input type="text" class="text-box" id="phone" placeholder="Phone" value="" />
-                            <input type="text" class="text-box" id="user-pass" placeholder="Password"  />
-                            <input type="text" class="text-box" id="confirmpassword" placeholder="Confirm password" value="" />
-                            <button class="btn black-btn popup-btn" id="signup-btn">Create account</button>
+                        <form id="form2" method="POST">
+                            <input type="text" class="text-box" name="fullname" id="name" placeholder="Name"/>
+                            <input type="text" class="text-box" name="email" id="email" placeholder="Email"/>
+                            <input type="text" class="text-box" name="username" id="user-name" placeholder="Username"/>
+                            <input type="text" class="text-box" name="phonenumber" id="phone" placeholder="Phone"/>
+                            <input type="password" class="text-box" name="password" id="user-pass" placeholder="Password"/>
+                            <input type="password" class="text-box" id="confirmpassword" placeholder="Confirm password"/>
+                            <input type="date" class="text-box" name="dob" id="dob" placeholder="dateOfbirth"/>
+                            <button type="button" class="btn black-btn popup-btn" id="signup-btn">Create account</button>
                         </form>
                     </div>
                 </div>

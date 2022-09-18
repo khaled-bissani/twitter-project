@@ -7,7 +7,7 @@ const username = document.getElementById('user-name');
 const phone = document.getElementById('phone');
 const password = document.getElementById('user-pass');
 const passwordRepeated = document.getElementById('confirmpassword');
-
+const dob = document.getElementById('dob');
 const signUp = document.getElementById("signup-btn");
 
 const userUsername = document.getElementById('user-username');
@@ -42,9 +42,17 @@ function checkSignup() {
     //regex to check phone number validity
     let numberFormat=/^\+9613[0-9]{0,6}|\+9617[0-9]{0,7}/;
 
-    if (realname.value != '' && email.value != '' && emailFormat.test(email.value) && username.value != '' && phone.value!= '' && numberFormat.test(phone.value) && password.value != '' && passwordRepeated.value != '' && passwordRepeated.value == password.value) {
-        console.log('all gooood');
+    if (realname.value != '' && email.value != '' && emailFormat.test(email.value) && username.value != '' && phone.value!= '' && numberFormat.test(phone.value) && password.value != '' && passwordRepeated.value != '' && passwordRepeated.value == password.value) 
+    {
         activate(signUp)
+        localStorage.setItem("fullname",realname.value);
+        localStorage.setItem("email",email.value);
+        localStorage.setItem("username",username.value);
+        localStorage.setItem("phonenumber",phone.value);
+        localStorage.setItem("password",password.value);
+        localStorage.setItem("dob",dob.value);
+        //console.log(localStorage.getItem('fullname') + " " + localStorage.getItem('email') + " " + localStorage.getItem('dob'));
+
     }
     else if (realname.value == '') {
         realname.style.backgroundColor = "#ffcccb"; 
@@ -94,6 +102,7 @@ username.addEventListener('input', checkSignup);
 phone.addEventListener('input', checkSignup);
 password.addEventListener('input', checkSignup);
 passwordRepeated.addEventListener('input', checkSignup);
+dob.addEventListener('input', checkSignup);
 
 function checkSignIn() {
 
@@ -119,3 +128,122 @@ function checkSignIn() {
 
 userUsername.addEventListener('input', checkSignIn);
 userPassword.addEventListener('input', checkSignIn);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+async function getapi(url) {
+    // Storing response
+    const response = await fetch(url);
+    // Storing data in form of JSON
+    var data = await response.json();
+    return data;
+}
+///////////////////////////////////////////////////////////////////////////////
+
+const signupbtn = document.getElementById('signup-btn');
+
+signupbtn.onclick = () => {
+
+    // data to be sent to the POST request
+    let data = {
+        "fullname": localStorage.getItem('fullname'), 
+        "email": localStorage.getItem('email'),
+        "username" : localStorage.getItem('username'),
+        "phonenumber": localStorage.getItem('phonenumber'),
+        "password":  localStorage.getItem('password'),
+        "dob": localStorage.getItem('dob'),
+    }
+    fetch("http://localhost/twitter-project/add-user.php", 
+    {
+        method: "POST",
+        body: JSON.stringify(data),
+        //headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json()) 
+    .then(json => console.log(json));
+    console.log(JSON.stringify(data))
+
+    window.location.replace('home.html');
+};
+    //console.log(data);
+    //window.localStorage.setItem("data", "tessssssssst");
+    //console.log(window.localStorage.getItem(data));
+    //var data = window.localStorage.getItem("data");
+    //localStorage.setItem("signUpData" : data);
+    /*
+    var form = document.getElementById('form2')
+    var data = new FormData(form);
+    console.log(data);
+   */
+    /*let data = {
+        "name": signupname.value, 
+        "email": signupemail.value,
+        "username" : signupusername.value,
+        "phone": signupphone.value,
+        "password":  signuppass.value,
+        "dob": dob.value}
+        console.log(data);*/
+    /*fetch('http://localhost/twitter-project/add-user.php', {
+        method: "POST",
+        body: data,
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response =>  console.log(response.json()));
+    console.log("testtttttt")*/
+   /* getapi("http://localhost/twitter-project/add-user.php")
+    async function getapi(url)
+    {
+        // Storing response
+        const response = await fetch(url ,
+        {
+            method: "POST",
+            body: JSON.stringify(data),
+            
+        });
+        console.log("data is       " + JSON.stringify(data));
+        // Storing data in form of JSON
+        data = await response.json();
+        console.log('data');
+        console.loge(data);
+        return data;
+    }
+}*/
+/////////////////////////////////////////////////////////////////////////////////
+const signInbtn = document.getElementById('signIn-btn');
+console.log(signInbtn);
+signInbtn.onclick = () => {
+    let logging = document.getElementById('user-username');
+    let username = logging.value;
+    let password = document.getElementById('user-password').value;
+    console.log(username);
+    console.log(password);
+    console.log("///////////");
+    let url = "http://localhost/twitter-project/getUsernames.php?username="+username;
+    let user = getapi(url);
+    let x;
+    let y;
+    const getuser= () => {
+        user.then((a) => {
+            x = a[0].username;
+            y = a[0].password;
+            console.log(x +" "+ y);
+            if(y == password){
+                localStorage.setItem("currentuser", x);
+                console.log(localStorage.getItem('currentuser'));
+                window.location.replace('home.html');
+            }
+            else{
+                //var w = document.createTextNode("Invalid credentials");
+                var popcontent = document.getElementById("pop1h2");
+                popcontent.innerText = "Invalid credentials";
+            }
+            //var y = document.createTextNode(results);
+            //appendig this result to the paragraph of all outputs
+            //output_results.appendChild(y);
+        });
+        
+    };
+    getuser();
+}
+
