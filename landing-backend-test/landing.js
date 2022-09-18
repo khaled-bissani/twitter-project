@@ -7,7 +7,7 @@ const username = document.getElementById('user-name');
 const phone = document.getElementById('phone');
 const password = document.getElementById('user-pass');
 const passwordRepeated = document.getElementById('confirmpassword');
-
+const dob = document.getElementById('dob');
 const signUp = document.getElementById("signup-btn");
 
 const userUsername = document.getElementById('user-username');
@@ -45,6 +45,14 @@ function checkSignup() {
     if (realname.value != '' && email.value != '' && emailFormat.test(email.value) && username.value != '' && phone.value!= '' && numberFormat.test(phone.value) && password.value != '' && passwordRepeated.value != '' && passwordRepeated.value == password.value) 
     {
         activate(signUp)
+        localStorage.setItem("fullname",realname.value);
+        localStorage.setItem("email",email.value);
+        localStorage.setItem("username",username.value);
+        localStorage.setItem("phonenumber",phone.value);
+        localStorage.setItem("password",password.value);
+        localStorage.setItem("dob",dob.value);
+        //console.log(localStorage.getItem('fullname') + " " + localStorage.getItem('email') + " " + localStorage.getItem('dob'));
+
     }
     else if (realname.value == '') {
         realname.style.backgroundColor = "#ffcccb"; 
@@ -94,6 +102,7 @@ username.addEventListener('input', checkSignup);
 phone.addEventListener('input', checkSignup);
 password.addEventListener('input', checkSignup);
 passwordRepeated.addEventListener('input', checkSignup);
+dob.addEventListener('input', checkSignup);
 
 function checkSignIn() {
 
@@ -127,102 +136,70 @@ userPassword.addEventListener('input', checkSignIn);
 const signupbtn = document.getElementById('signup-btn');
 console.log(signupbtn);
 
-let signupname = document.getElementById("name");
-let signupemail = document.getElementById("email");
-let signupusername = document.getElementById("user-name");
-let signupphone = document.getElementById("phone");
-let signuppass = document.getElementById("user-pass");
-let dob = document.getElementById("dob");
+
 
 
 signupbtn.onclick = () => {
+
     // data to be sent to the POST request
-    var data = new FormData();
-    data.append("name", signupname.value);
-    data.append("email", signupemail.value);
-    data.append("username", signupusername.value);
-    data.append("phone", signupphone.value);
-    data.append("password", signuppass.value);
-    data.append("dob", dob.value);
+    let data = {
+        "fullname": localStorage.getItem('fullname'), 
+        "email": localStorage.getItem('email'),
+        "username" : localStorage.getItem('username'),
+        "phonenumber": localStorage.getItem('phonenumber'),
+        "password":  localStorage.getItem('password'),
+        "dob": localStorage.getItem('dob'),
+    }
+    //console.log(data);
+    //window.localStorage.setItem("data", "tessssssssst");
+    //console.log(window.localStorage.getItem(data));
+    //var data = window.localStorage.getItem("data");
+    //localStorage.setItem("signUpData" : data);
+    /*
+    var form = document.getElementById('form2')
+    var data = new FormData(form);
+    console.log(data);
+   */
     /*let data = {
         "name": signupname.value, 
         "email": signupemail.value,
         "username" : signupusername.value,
         "phone": signupphone.value,
         "password":  signuppass.value,
-        "dob": dob.value*/
-    fetch('http://localhost/twitter-project/add-user.php', {
+        "dob": dob.value}
+        console.log(data);*/
+    /*fetch('http://localhost/twitter-project/add-user.php', {
         method: "POST",
         body: data,
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
-    .then(response => response.json())
-    .then(json => console.log(json));
-    console.log("testtttttt")
-};
-
-
-
-
-
-/*signupbtn.onclick = () => {
-    // data to be sent to the POST request
-    let _data = {
-        title: "foo",
-        body: "bar", 
-        userId:1
+    .then(response =>  console.log(response.json()));
+    console.log("testtttttt")*/
+   /* getapi("http://localhost/twitter-project/add-user.php")
+    async function getapi(url)
+    {
+        // Storing response
+        const response = await fetch(url ,
+        {
+            method: "POST",
+            body: JSON.stringify(data),
+            
+        });
+        console.log("data is       " + JSON.stringify(data));
+        // Storing data in form of JSON
+        data = await response.json();
+        console.log('data');
+        console.loge(data);
+        return data;
     }
-    
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+}*/
+    fetch("http://localhost/twitter-project/add-user.php", 
+    {
         method: "POST",
-        body: JSON.stringify(_data),
+        body: JSON.stringify(data),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json()) 
     .then(json => console.log(json));
-    .catch(err => console.log(err));
-};*/
-
-
-
-/*const signInbtn = document.getElementById('#signIn-btn');
-console.log(signInbtn);
-signInbtn.addEventListener('click' , fetchLogInApi);
-
-function fetchLogInApi(){
-    let payload = {
-        a: 1,
-        b: 2
+    console.log(JSON.stringify(data))
     };
-    
-    let data = new FormData();
-    data.append( "json", JSON.stringify( payload ) );
-    
-    fetch("/echo/json/",
-    {
-        method: "POST",
-        body: data
-    })
-    .then(function(res){ return res.json(); })
-    .then(function(data){ alert( JSON.stringify( data ) ) })
-}*/
-
-
-
-//fetch post api from form data?
-/*const data = new URLSearchParams();
-for (const pair of new FormData(formElement)) {
-    data.append(pair[0], pair[1]);
-}
-
-fetch(url, {
-    method: 'post',
-    body: data,
-})
-.then(…);
-
-
-const data = new URLSearchParams(new FormData(formElement));*/
-
-
-
