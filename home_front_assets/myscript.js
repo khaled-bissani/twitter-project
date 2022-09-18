@@ -7,20 +7,49 @@ async function getapi(url) {
     var data = await response.json();
     return data;
 }
-
-window.addEventListener = ('load', getId())
-function getId(){
-    const lastTweet = getapi('http://localhost/twitter-project/getLastTweetId.php');
-    //accessing the attributes of the object after being fetched, otherwise they will be pending results
-    const getlastId= () => {
-        lastTweet.then((a) => {
-            results = a[0].tweet_id;
-            sessionStorage.setItem('lastTweetId',results);
-            
-        });
-    };
-    getlastId();
+let likesdata;
+let totallikesdata = [];
+window.addEventListener = ('load', fetchApis())
+function fetchApis(){
+    function getId(){
+        const lastTweet = getapi('http://localhost/twitter-project/getLastTweetId.php');
+        //accessing the attributes of the object after being fetched, otherwise they will be pending results
+        const getlastId= () => {
+            lastTweet.then((a) => {
+                results = a[0].tweet_id;
+                sessionStorage.setItem('lastTweetId',results);
+                
+            });
+        };
+        getlastId();
+    }
+    function getLikesNum(){
+        const LikesNum = getapi('http://localhost/twitter-project/getnumberoflikes.php');
+        //accessing the attributes of the object after being fetched, otherwise they will be pending results
+        const getNumOfLikes= () => {
+            LikesNum.then((a) => {
+                console.log("heyy agaiin");
+                for (const b in a){
+                    console.log("b" + b);
+                    tweet = a[b].tweet_id;
+                    likes = a[b].nummber_of_likes;
+                    console.log("tweet: " + tweet + " likes " + likes);
+                    likesdata = {
+                        "tweet" : tweet,
+                        "likesnum": likes
+                    }
+                    totallikesdata.push(likesdata);
+                    console.log(likesdata);
+                }
+        
+            });
+        };
+        getNumOfLikes();
+    }
+    getId();
+    getLikesNum();
 }
+console.log(totallikesdata);
 //console.log("last id : " + lastTweetId);
 
 
@@ -50,19 +79,4 @@ tweetBtn2.onclick = () => {
     document.querySelector('.main-container').appendChild( clone );
 }
 
-function getLikesNum(){
-    const LikesNum = getapi('http://localhost/twitter-project/getnumberoflikes.php');
-    //accessing the attributes of the object after being fetched, otherwise they will be pending results
-    const getNumOfLikes= () => {
-        LikesNum.then((a) => {
-            console.log("heyy agaiin");
-            for (const b in a){
-                console.log(b);
-            }
-            results = a[0].tweet_id;
-            sessionStorage.setItem('lastTweetId',results);
-            
-        });
-    };
-    getNumOfLikes();
-}
+
