@@ -219,13 +219,17 @@ signInbtn.onclick = () => {
     console.log("///////////");
     let url = "http://localhost/twitter-project/getUsernames.php?username="+username;
     let user = getapi(url);
+    let x;
+    let y;
     const getuser= () => {
         user.then((a) => {
-            let x = a[0].username;
-            let y = a[0].password;
+            x = a[0].username;
+            y = a[0].password;
             console.log(x +" "+ y);
             if(y == password){
-                window.location.replace('home.html');
+                localStorage.setItem("currentuser", x);
+                console.log(localStorage.getItem('currentuser'));
+                //window.location.replace('home.html');
             }
             else{
                 //var w = document.createTextNode("Invalid credentials");
@@ -236,6 +240,7 @@ signInbtn.onclick = () => {
             //appendig this result to the paragraph of all outputs
             //output_results.appendChild(y);
         });
+        
     };
     getuser();
 }
