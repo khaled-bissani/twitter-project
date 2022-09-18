@@ -137,22 +137,28 @@ let dob = document.getElementById("dob");
 
 signupbtn.onclick = () => {
     // data to be sent to the POST request
-    let data = {
+    var data = new FormData();
+    data.append("name", signupname.value);
+    data.append("email", signupemail.value);
+    data.append("username", signupusername.value);
+    data.append("phone", signupphone.value);
+    data.append("password", signuppass.value);
+    data.append("dob", dob.value);
+    /*let data = {
         "name": signupname.value, 
         "email": signupemail.value,
         "username" : signupusername.value,
         "phone": signupphone.value,
         "password":  signuppass.value,
-        "dob": dob.value
-    }
-    console.log(data);
+        "dob": dob.value*/
     fetch('http://localhost/twitter-project/add-user.php', {
         method: "POST",
-        body: JSON.stringify(data),
+        body: data,
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json())
     .then(json => console.log(json));
+    console.log("testtttttt")
 };
 
 
