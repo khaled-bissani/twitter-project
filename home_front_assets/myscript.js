@@ -1,8 +1,5 @@
 console.log("IN home");
-//let lastTweet = document.querySelector('.main-container').lastChild.getAttribute("id");
-//console.log(lastTweet)
-//let lastTweetId = lastTweet.getAttribute('id');
-//console.log("last id = " + lastTweetId);
+
 async function getapi(url) {
     // Storing response
     const response = await fetch(url);
@@ -11,18 +8,27 @@ async function getapi(url) {
     return data;
 }
 
-window.addEventListener = ('load', getDogResult())
+window.addEventListener = ('load', getId())
+function getId(){
+    console.log("page is looooded");
+    const lastTweet = getapi('http://localhost/twitter-project/getLastTweetId.php');
+    //accessing the attributes of the object after being fetched, otherwise they will be pending results
+    const getlastId= () => {
+        lastTweet.then((a) => {
+            console.log("heyy agaiin");
+            results = a[0].tweet_id;
+            sessionStorage.setItem('lastTweetId',results);
+            
+        });
+    };
+    getlastId();
+}
+console.log(sessionStorage.getItem('lastTweetId'));
+//console.log("last id : " + lastTweetId);
 
 
-let incrementId = 100;
-// Create a clone of element with id ddl_1:
-let clone = document.querySelector('.feed-section').cloneNode( true );
-
-// Change the id attribute of the newly created element:
-clone.setAttribute( 'id', incrementId+1 );
-
-// Append the newly created element on element p 
-document.querySelector('.main-container').appendChild( clone );
+let incrementId = sessionStorage.getItem('lastTweetId');
+console.log(incrementId);
 
 const tweetBtn = document.getElementById("tweet-btn");
 
