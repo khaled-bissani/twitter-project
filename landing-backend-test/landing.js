@@ -208,10 +208,23 @@ signupbtn.onclick = () => {
     }
 }*/
 /////////////////////////////////////////////////////////////////////////////////
-/*const signInbtn = document.getElementById('signIp-btn');
+const signInbtn = document.getElementById('signIp-btn');
 
 signInbtn.onclick = () => {
-    let username = document.getElementById('user-username');
-
-}*/
+    let logging = document.getElementById('user-username');
+    let username = logging.value;
+    console.log(username);
+    let url = "http://localhost/twitter-project/getUsernames.php?username="+username;
+    let user = getapi(url);
+    console.log(user);
+    /*const getAge= () => {
+        user.then((a) => {
+            results = "\nPredicted age is: " +a.age + "\n";
+            var y = document.createTextNode(results);
+            //appendig this result to the paragraph of all outputs
+            output_results.appendChild(y);
+        });
+    };
+    getAge();*/
+}
 
