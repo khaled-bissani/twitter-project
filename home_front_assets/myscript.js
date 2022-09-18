@@ -87,20 +87,8 @@ console.log(fullname);
 let searchBtn = document.getElementById('search-btn');
 searchBtn.onclick = () => {
     console.log('page is fully loaded');
-    /*fetch('http://localhost/twitter-project/search.php?fullname=Chandler bing')
-        .then(res => res.json())
-        .then(data => {
-            //checking if the status of the object is success
-            if (data.status == "success") {
-                dogResult.innerHTML = `<img src="${data.message}"/>`;
-            }
-            else {
-                alert("error, can't find image");
-            };
-        });*/
-        console.log('1515');
-    const apiUrl = "http://localhost/twitter-project/search.php?fullname="+`$fullname`;
-    const searchResult = getapi(apiUrl);
+    console.log('1515');
+    const searchResult = getapi("http://localhost/twitter-project/search.php?fullname="+fullname);
     //accessing the attributes of the object after being fetched, otherwise they will be pending results
     const finalsearch= () => {
         searchResult.then((a) => {
